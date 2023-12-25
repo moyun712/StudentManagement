@@ -1,14 +1,16 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Message {
+public class Message implements Serializable {
     private int mid;
     private String title;
     private String content;
     private String name;
     private LocalDateTime time;
     int count;
+    private static final long serialVersionUID = 1L;
     public Message(){}
     public int getMid() {
         return mid;

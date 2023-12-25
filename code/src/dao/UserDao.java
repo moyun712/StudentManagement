@@ -74,7 +74,6 @@ public class UserDao {
 		
 		try {
 			//判断数据库中是否存在该用户
-			System.out.println(userIsExist(username));
 			if(!userIsExist(username)){//不存在该用户，可以注册
 				user = new User();//实例化一个user对象
 				//给用户对象赋值
