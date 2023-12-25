@@ -14,7 +14,7 @@ public class DBUtils {
     public static Connection getConnection(){
     	String dbUserName = "penghao712";
     	String dbUserPasswd = "123456";
-    	String dbURL = "jdbc:mysql://localhost:3306/StudentInfoManagement?"
+    	String dbURL = "jdbc:mysql://localhost:3306/company?"
     	            + "user="+dbUserName+"&password="+dbUserPasswd+"&useUnicode=true&characterEncoding=UTF8";
     	Connection conn = null;
     	try {
