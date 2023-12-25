@@ -1,6 +1,7 @@
 
-
-
+<%@ page language="java" pageEncoding="gbk" import="dao.*,model.*,service.*,utils.*" %>
+<%@ page import="dao.NewsDao" %>
+<%@ page import="java.util.ArrayList" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
@@ -26,7 +27,7 @@ body {
 
 function openChat(){
 
-	window.open("chat/index.html","","left=250   top=200   width=500   height=400");
+	window.open("chat/index.jsp","","left=250   top=200   width=500   height=400");
 }
 </script>
 <table width="799" border="0" align="center" cellpadding="0"
@@ -61,17 +62,17 @@ function openChat(){
 		<td><img src="image/d_r3_c1.jpg" width="60" height="40" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><a
-			href="index.html"><img src="image/d_r3_c5.jpg" width="64"
+			href="index.jsp"><img src="image/d_r3_c5.jpg" width="64"
 			height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="showProductList.html"><img
+			height="40" border="0" /><a href="showProductList.jsp"><img
 			src="image/d_r3_c7.jpg" name="image1" width="94" height="40"
 			border="0" id="image1" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="showNewsList.html"><img
+			height="40" border="0" /><a href="showNewsList.jsp"><img
 			src="image/d_r3_c8.jpg" width="93" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><a
 			href="#" onclick="openChat()"><img src="image/d_r3_c9.jpg" width="95"
 			height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="messageBoard.html" target="_blank"><img
+			height="40" border="0" /><a href="messageBoard.jsp" target="_blank"><img
 			src="image/d_r3_c10.jpg" width="93" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><a href="login.jsp"><img src="image/d_r3_c13.jpg"
 			width="85" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
@@ -96,74 +97,26 @@ function openChat(){
             <td align="right" background="image/d02.jpg"><img src="image/d_r7_c14.jpg" width="94" height="35" /></td>
           </tr>
 
-		  
-		  
+		  <%
+              NewsDao newsDao = new NewsDao();
+              ArrayList<News> list = newsDao.getAllNews();
+              for(News news:list){
+
+          %>
           <tr>
-            <td height="26" colspan="2"> &nbsp;<a href="detailNews.html?newsID=11" class="dong06">索尼W55降价送卡&nbsp;&nbsp;&nbsp;<font color="#ff0000">[2007-10-07]</font></a></td>
+            <td height="26" colspan="2"> &nbsp;<a href="detailNews.jsp?newsID=<%=news.getId()%>" class="dong06"><%=news.getTitle()%>&nbsp;&nbsp;&nbsp;<font color="#ff0000"><%news.getTime();%></font></a></td>
           </tr>
           <tr>
             <td colspan="2"><img src="image/d03.jpg" width="352" height="1" /></td>
           </tr>
+            <%
+                }
+            %>
 
 
 		  
 		  
-          <tr>
-            <td height="26" colspan="2"> &nbsp;<a href="detailNews.html?newsID=10" class="dong06">理光R5不到二千&nbsp;&nbsp;&nbsp;<font color="#ff0000">[2007-10-06]</font></a></td>
-          </tr>
-          <tr>
-            <td colspan="2"><img src="image/d03.jpg" width="352" height="1" /></td>
-          </tr>
 
-
-		  
-		  
-          <tr>
-            <td height="26" colspan="2"> &nbsp;<a href="detailNews.html?newsID=9" class="dong06">MP4关注度排行TOP10&nbsp;&nbsp;&nbsp;<font color="#ff0000">[2007-10-05]</font></a></td>
-          </tr>
-          <tr>
-            <td colspan="2"><img src="image/d03.jpg" width="352" height="1" /></td>
-          </tr>
-
-
-		  
-		  
-          <tr>
-            <td height="26" colspan="2"> &nbsp;<a href="detailNews.html?newsID=8" class="dong06">单反与镜头组合&nbsp;&nbsp;&nbsp;<font color="#ff0000">[2007-10-05]</font></a></td>
-          </tr>
-          <tr>
-            <td colspan="2"><img src="image/d03.jpg" width="352" height="1" /></td>
-          </tr>
-
-
-		  
-		  
-          <tr>
-            <td height="26" colspan="2"> &nbsp;<a href="detailNews.html?newsID=7" class="dong06">国庆各品牌最好卖的相机&nbsp;&nbsp;&nbsp;<font color="#ff0000">[2007-10-04]</font></a></td>
-          </tr>
-          <tr>
-            <td colspan="2"><img src="image/d03.jpg" width="352" height="1" /></td>
-          </tr>
-
-
-		  
-		  
-          <tr>
-            <td height="26" colspan="2"> &nbsp;<a href="detailNews.html?newsID=6" class="dong06">国庆期间降价最猛八款数码相机&nbsp;&nbsp;&nbsp;<font color="#ff0000">[2007-10-03]</font></a></td>
-          </tr>
-          <tr>
-            <td colspan="2"><img src="image/d03.jpg" width="352" height="1" /></td>
-          </tr>
-
-
-		  
-		  
-          <tr>
-            <td height="26" colspan="2"> &nbsp;<a href="detailNews.html?newsID=5" class="dong06">三星女性翻盖E428行货仅1180&nbsp;&nbsp;&nbsp;<font color="#ff0000">[2007-10-02]</font></a></td>
-          </tr>
-          <tr>
-            <td colspan="2"><img src="image/d03.jpg" width="352" height="1" /></td>
-          </tr>
 
 
            <tr>
@@ -173,16 +126,16 @@ function openChat(){
         </table></td>
         <td align="right" valign="top"><table width="268" border="0" cellpadding="0" cellspacing="0">
           <tr>
-            <td><a href="showProductList.html"><img src="image/d_r11_5_r1_c1.jpg" width="268" height="63" border="0" /></a></td>
+            <td><a href="showProductList.jsp"><img src="image/d_r11_5_r1_c1.jpg" width="268" height="63" border="0" /></a></td>
           </tr>
           <tr>
-            <td><a href="showProductList.html"><img src="image/d_r11_5_r3_c1.jpg" width="268" height="59" border="0" /></a></td>
+            <td><a href="showProductList.jsp"><img src="image/d_r11_5_r3_c1.jpg" width="268" height="59" border="0" /></a></td>
           </tr>
           <tr>
-            <td><a href="showProductList.html"><img src="image/d_r11_5_r4_c1.jpg" width="268" height="61" border="0" /></a></td>
+            <td><a href="showProductList.jsp"><img src="image/d_r11_5_r4_c1.jpg" width="268" height="61" border="0" /></a></td>
           </tr>
           <tr>
-            <td><a href="showProductList.html"><img src="image/d_r11_5_r5_c1.jpg" width="268" height="64" border="0" /></a></td>
+            <td><a href="showProductList.jsp"><img src="image/d_r11_5_r5_c1.jpg" width="268" height="64" border="0" /></a></td>
           </tr>
         </table></td>
       </tr>
@@ -195,16 +148,16 @@ function openChat(){
       </table>
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="25%" align="center"><a href="showProductList.html"><img src="image/d_r11_10_r1_c1.jpg" width="143" height="112" border="0" /></a></td>
-          <td width="25%" align="center"><a href="showProductList.html"><img src="image/d_r11_10_r1_c8.jpg" width="142" height="112" border="0" /></a></td>
-          <td width="25%" align="center"><a href="showProductList.html"><img src="image/d_r11_10_r1_c16.jpg" width="141" height="112" border="0" /></a></td>
-          <td width="25%" align="center"><a href="showProductList.html"><img src="image/d_r11_10_r1_c22.jpg" width="142" height="112" border="0"/></a></td>
+          <td width="25%" align="center"><a href="showProductList.jsp"><img src="image/d_r11_10_r1_c1.jpg" width="143" height="112" border="0" /></a></td>
+          <td width="25%" align="center"><a href="showProductList.jsp"><img src="image/d_r11_10_r1_c8.jpg" width="142" height="112" border="0" /></a></td>
+          <td width="25%" align="center"><a href="showProductList.jsp"><img src="image/d_r11_10_r1_c16.jpg" width="141" height="112" border="0" /></a></td>
+          <td width="25%" align="center"><a href="showProductList.jsp"><img src="image/d_r11_10_r1_c22.jpg" width="142" height="112" border="0"/></a></td>
         </tr>
 		 <tr>
-          <td width="25%" align="center"><a href="showProductList.html"><img src="image/d_r11_10_r1_c2.jpg" width="143" height="112" border="0" /></a></td>
-          <td width="25%" align="center"><a href="showProductList.html"><img src="image/d_r11_10_r1_c81.jpg" width="142" height="112" border="0" /></a></td>
-          <td width="25%" align="center"><a href="showProductList.html"><img src="image/d_r11_10_r1_c116.jpg" width="141" height="112" border="0" /></a></td>
-          <td width="25%" align="center"><a href="showProductList.html"><img src="image/d_r11_10_r1_c221.jpg" width="142" height="112" border="0"/></a></td>
+          <td width="25%" align="center"><a href="showProductList.jsp"><img src="image/d_r11_10_r1_c2.jpg" width="143" height="112" border="0" /></a></td>
+          <td width="25%" align="center"><a href="showProductList.jsp"><img src="image/d_r11_10_r1_c81.jpg" width="142" height="112" border="0" /></a></td>
+          <td width="25%" align="center"><a href="showProductList.jsp"><img src="image/d_r11_10_r1_c116.jpg" width="141" height="112" border="0" /></a></td>
+          <td width="25%" align="center"><a href="showProductList.jsp"><img src="image/d_r11_10_r1_c221.jpg" width="142" height="112" border="0"/></a></td>
         </tr>
     </table>
       <table width="100%" border="0" cellspacing="0" cellpadding="0">

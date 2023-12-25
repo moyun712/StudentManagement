@@ -5,6 +5,8 @@
       <map>
         <entry key="file://$PROJECT_DIR$/code/WebContent/index.html" value="file://$PROJECT_DIR$/code/WebContent" />
         <entry key="file://$PROJECT_DIR$/code/WebContent/index.jsp" value="file://$PROJECT_DIR$/code/WebContent" />
+        <entry key="file://$PROJECT_DIR$/code/WebContent/login.jsp" value="file://$PROJECT_DIR$/code/WebContent" />
+        <entry key="file://$PROJECT_DIR$/code/WebContent/messageBoard.html" value="file://$PROJECT_DIR$/code/WebContent" />
       </map>
     </option>
   </component>

@@ -1,4 +1,4 @@
-
+<%@ page language="java" pageEncoding="gbk"%>
 <html>
 <head>
 <title>回复留言</title>
@@ -30,7 +30,7 @@
 	<tr>
 		<td width='11' background='img/1/titlemu_1.gif'></td>
 		<td width='*' background='img/1/titlemu_2.gif'>
-		<div align='center'><a href='messageBoard.html' class=jdmenu><b>留言</b></a>
+		<div align='center'><a href='messageBoard.jsp' class=jdmenu><b>留言</b></a>
 		</div>
 		</td>
 		<td width='12' background='img/1/titlemu_3.gif'></td>
@@ -49,7 +49,7 @@
 		</TR>
 		<TR>
 			<TD align=middle valign='top'>
-			<form name='form' method='post' action='saveMessage.jsp' onSubmit=''> //缺少一个保存Message的页面
+			<form name='form' method='post' action='saveMessage.jsp' onSubmit=''>
 			<table width='100%' border='0' align='center' cellpadding='1'
 				cellspacing='1' class='unnamed1'>
 

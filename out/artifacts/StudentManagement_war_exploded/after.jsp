@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="GBK"%>
+<%@ page language="java" pageEncoding="gbk"%>
 
 <html>
 <%@ include file="top.jsp"%>
@@ -9,8 +9,8 @@
 	background=zjej/btmunu.gif border=0>
 	<TBODY>
 		<TR vAlign=bottom>
-			<TD>&nbsp;&nbsp;<A class=nav href="index.html">首页</A><FONT
-				class=nav> &gt; </FONT><A class=nav href="showNewsList.html">站内新闻</A></TD>
+			<TD>&nbsp;&nbsp;<A class=nav href="index.jsp">首页</A><FONT
+				class=nav> &gt; </FONT><A class=nav href="showNewsList.jsp">站内新闻</A></TD>
 		</TR>
 	</TBODY>
 </TABLE>

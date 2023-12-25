@@ -1,4 +1,4 @@
-
+<%@ page language="java" pageEncoding="gbk"%>
 
 
 <html>
@@ -9,7 +9,7 @@
 
 function openChat(){
 
-	window.open("chat/index.html","","left=250   top=200   width=500   height=400");
+	window.open("chat/index.jsp","","left=250   top=200   width=500   height=400");
 }
 </script>
 <table width="799" border="0" align="center" cellpadding="0"
@@ -44,19 +44,19 @@ function openChat(){
 		<td><img src="image/d_r3_c1.jpg" width="60" height="40" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><a
-			href="index.html"><img src="image/d_r3_c5.jpg" width="64"
+			href="index.jsp"><img src="image/d_r3_c5.jpg" width="64"
 			height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="showProductList.html"><img
+			height="40" border="0" /><a href="showProductList.jsp"><img
 			src="image/d_r3_c7.jpg" name="image1" width="94" height="40"
 			border="0" id="image1" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="showNewsList.html"><img
+			height="40" border="0" /><a href="showNewsList.jsp"><img
 			src="image/d_r3_c8.jpg" width="93" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><a
 			href="#" onclick="openChat()"><img src="image/d_r3_c9.jpg" width="95"
 			height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="messageBoard.html" target="_blank"><img
+			height="40" border="0" /><a href="messageBoard.jsp" target="_blank"><img
 			src="image/d_r3_c10.jpg" width="93" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="login.html"><img src="image/d_r3_c13.jpg"
+			height="40" border="0" /><a href="login.jsp"><img src="image/d_r3_c13.jpg"
 			width="85" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/d_r3_c25.jpg"
@@ -71,8 +71,8 @@ function openChat(){
 	background=zjej/btmunu.gif border=0>
 	<TBODY>
 		<TR vAlign=bottom>
-			<TD>&nbsp;&nbsp;<A class=nav href="index.html">首页</A><FONT
-				class=nav> &gt; </FONT><A class=nav href="showNewsList.html">站内新闻</A></TD>
+			<TD>&nbsp;&nbsp;<A class=nav href="index.jsp">首页</A><FONT
+				class=nav> &gt; </FONT><A class=nav href="showNewsList.jsp">站内新闻</A></TD>
 		</TR>
 	</TBODY>
 </TABLE>
@@ -84,16 +84,16 @@ function openChat(){
 <link href="image/css.css" rel="stylesheet" type="text/css" />
 <table width="193" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td align="center" valign="middle"><a href="showNewsList.html"><img src="image/cg1_r1_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="showNewsList.jsp"><img src="image/cg1_r1_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
 	  <tr>
-        <td align="center" valign="middle"><a href="showProductList.html"><img src="image/cg1_r2_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="showProductList.jsp"><img src="image/cg1_r2_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
       <tr>
-        <td align="center" valign="middle"><a href="after.html"><img src="image/cg1_r4_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="after.jsp"><img src="image/cg1_r4_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
       <tr>
-        <td align="center" valign="middle"><a href="about.html"><img src="image/cg1_r6_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="about.jsp"><img src="image/cg1_r6_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
       <tr  height="1">
         <td align="center" valign="middle">&nbsp;</td>
@@ -138,77 +138,77 @@ function openChat(){
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">1</td>
-						<td width="85%"><a href="detailNews.html?newsID=11">索尼W55降价送卡
+						<td width="85%"><a href="detailNews.jsp?newsID=11">索尼W55降价送卡
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-07]</font></a></td>
 					</tr>
 					
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">2</td>
-						<td width="85%"><a href="detailNews.html?newsID=10">理光R5不到二千
+						<td width="85%"><a href="detailNews.jsp?newsID=10">理光R5不到二千
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-06]</font></a></td>
 					</tr>
 					
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">3</td>
-						<td width="85%"><a href="detailNews.html?newsID=9">MP4关注度排行TOP10
+						<td width="85%"><a href="detailNews.jsp?newsID=9">MP4关注度排行TOP10
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-05]</font></a></td>
 					</tr>
 					
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">4</td>
-						<td width="85%"><a href="detailNews.html?newsID=8">单反与镜头组合
+						<td width="85%"><a href="detailNews.jsp?newsID=8">单反与镜头组合
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-05]</font></a></td>
 					</tr>
 					
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">5</td>
-						<td width="85%"><a href="detailNews.html?newsID=7">国庆各品牌最好卖的相机
+						<td width="85%"><a href="detailNews.jsp?newsID=7">国庆各品牌最好卖的相机
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-04]</font></a></td>
 					</tr>
 					
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">6</td>
-						<td width="85%"><a href="detailNews.html?newsID=6">国庆期间降价最猛八款数码相机
+						<td width="85%"><a href="detailNews.jsp?newsID=6">国庆期间降价最猛八款数码相机
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-03]</font></a></td>
 					</tr>
 					
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">7</td>
-						<td width="85%"><a href="detailNews.html?newsID=5">三星女性翻盖E428行货仅1180
+						<td width="85%"><a href="detailNews.jsp?newsID=5">三星女性翻盖E428行货仅1180
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-02]</font></a></td>
 					</tr>
 					
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">8</td>
-						<td width="85%"><a href="detailNews.html?newsID=4">时尚浪漫情侣手机配对推荐
+						<td width="85%"><a href="detailNews.jsp?newsID=4">时尚浪漫情侣手机配对推荐
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-01]</font></a></td>
 					</tr>
 					
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">9</td>
-						<td width="85%"><a href="detailNews.html?newsID=3">黄金周最热销手机汇总导购
+						<td width="85%"><a href="detailNews.jsp?newsID=3">黄金周最热销手机汇总导购
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-01]</font></a></td>
 					</tr>
 					
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%">10</td>
-						<td width="85%"><a href="detailNews.html?newsID=2">爱国者数码相机今日七折优惠
+						<td width="85%"><a href="detailNews.jsp?newsID=2">爱国者数码相机今日七折优惠
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-09-30]</font></a></td>
 					</tr>
 					
 					<tr valign="bottom" align="right">
 						<td colspan="3" width="100%">&nbsp;&nbsp;&nbsp;&nbsp;<a
-							href="showNewsList.html?page=1">上一页</a>| <a
-							href="showNewsList.html?page=2">下一页</a></td>
+							href="showNewsList.jsp?page=1">上一页</a>| <a
+							href="showNewsList.jsp?page=2">下一页</a></td>
 					</tr>
 
 				</tbody>

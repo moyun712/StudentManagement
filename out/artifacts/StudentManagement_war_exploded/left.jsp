@@ -2,10 +2,10 @@
 <link href="image/css.css" rel="stylesheet" type="text/css" />
 <table width="193" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td align="center" valign="middle"><a href="showNewsList.html"><img src="image/cg1_r1_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="showNewsList.jsp"><img src="image/cg1_r1_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
 	  <tr>
-        <td align="center" valign="middle"><a href="showProductList.html"><img src="image/cg1_r2_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="showProductList.jsp"><img src="image/cg1_r2_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
       <tr>
         <td align="center" valign="middle"><a href="after.jsp"><img src="image/cg1_r4_c2.jpg" width="175" height="25" border="0" /></a></td>

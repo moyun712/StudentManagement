@@ -1,3 +1,4 @@
+<%@ page language="java" pageEncoding="gbk"%>
 
 
 <html>
@@ -8,7 +9,7 @@
 
 function openChat(){
 
-	window.open("chat/index.html","","left=250   top=200   width=500   height=400");
+	window.open("chat/index.jsp","","left=250   top=200   width=500   height=400");
 }
 </script>
 <table width="799" border="0" align="center" cellpadding="0"
@@ -43,19 +44,19 @@ function openChat(){
 		<td><img src="image/d_r3_c1.jpg" width="60" height="40" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><a
-			href="index.html"><img src="image/d_r3_c5.jpg" width="64"
+			href="index.jsp"><img src="image/d_r3_c5.jpg" width="64"
 			height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="showProductList.html"><img
+			height="40" border="0" /><a href="showProductList.jsp"><img
 			src="image/d_r3_c7.jpg" name="image1" width="94" height="40"
 			border="0" id="image1" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="showNewsList.html"><img
+			height="40" border="0" /><a href="showNewsList.jsp"><img
 			src="image/d_r3_c8.jpg" width="93" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><a
 			href="#" onclick="openChat()"><img src="image/d_r3_c9.jpg" width="95"
 			height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="messageBoard.html" target="_blank"><img
+			height="40" border="0" /><a href="messageBoard.jsp" target="_blank"><img
 			src="image/d_r3_c10.jpg" width="93" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="login.html"><img src="image/d_r3_c13.jpg"
+			height="40" border="0" /><a href="login.jsp"><img src="image/d_r3_c13.jpg"
 			width="85" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/d_r3_c25.jpg"
@@ -70,9 +71,8 @@ function openChat(){
 	background=zjej/btmunu.gif border=0>
 	<TBODY>
 		<TR vAlign=bottom>
-			<TD>&nbsp;&nbsp;<A class=nav href="index.html">首页</A><FONT
-				class=nav> &gt; </FONT><A class=nav href="showProductList.html">商品展示</A><FONT
-				class=nav> &gt; </FONT>商品信息</TD>
+			<TD>&nbsp;&nbsp;<A class=nav href="index.jsp">首页</A><FONT
+				class=nav> &gt; </FONT><A class=nav href="showNewsList.jsp">站内新闻</A></TD>
 		</TR>
 	</TBODY>
 </TABLE>
@@ -84,18 +84,20 @@ function openChat(){
 		</TR>
 	</TBODY>
 </TABLE>
-<TABLE cellSpacing=0 cellPadding=0 width=776 align=center border=0>
-	<TBODY>
-		<TR>
-			<TD vAlign=top width=195 background=zjej/ny3.gif bgColor=#ffffff
-				height=186>
+			<!--    右侧显示区域   开始 -->
+			
+			<table width="799" border="0" align="center" cellpadding="0"
+				cellspacing="0" class="n">
+				<tr>
+					<td align="center" valign="top" background="image/cg5.jpg"
+						bgcolor="#f4f4f4">
 <link href="image/css.css" rel="stylesheet" type="text/css" />
 <table width="193" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td align="center" valign="middle"><a href="showNewsList.html"><img src="image/cg1_r1_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="showNewsList.jsp"><img src="image/cg1_r1_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
 	  <tr>
-        <td align="center" valign="middle"><a href="showProductList.html"><img src="image/cg1_r2_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="showProductList.jsp"><img src="image/cg1_r2_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
       <tr>
         <td align="center" valign="middle"><a href="after.jsp"><img src="image/cg1_r4_c2.jpg" width="175" height="25" border="0" /></a></td>
@@ -135,84 +137,45 @@ function openChat(){
         </table></td>
       </tr>
     </table>
-</TD>
-			<TD vAlign=top width=3 bgColor=#e8e8e8></TD>
-			<td valign="top" bgcolor="#ffffff" height="300">
-			<table cellspacing="0" cellpadding="0" width="100%" align="center"
-				border="0">
-				<tbody>
-					<tr valign="top">
-						<td>
-						<table cellspacing="5" cellpadding="3" width="100%"
-							bgcolor="#ffffff" border="0">
-							<tbody>
+</td>
+					<td width="608" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td>
+							<table width="100%" border="0" cellpadding="0" cellspacing="0">
 								
+								<tr align="center" height="50">
+									<td valign="middle" colspan="2" background="image/cg2.jpg"><span
+										class="g03" style="font-weight: bold" >
+									索尼W55降价送卡</span></td>
+								</tr>
+							</table>
+							</td>
+						</tr>
+						<tr>
+							<td height="370" align="right" valign="top">
+							<table width="100%" border="0" cellspacing="32" cellpadding="0">
 								<tr>
-									<td valign="top" align="middle" width="150" height="100"><font
-										color="#000000"><img
-										style="BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000"
-										height="83" hspace="0" src="image/d_r11_10_r1_c221.jpg"
-										width="86" align="default" border="0" /></font></td>
-									<td height="100" valign="top">
-									<table height="100%" cellspacing="3" cellpadding="0"
-										width="100%" border="0">
-										<tbody>
-
-											<tr valign="top">
-												<td>
-												<table cellspacing="1" cellpadding="3" width="100%"
-													bgcolor="#cccccc" border="0">
-													<tbody>
-														<tr valign="top" bgcolor="#ffffff">
-															<td align="middle" width="90" bgcolor="#f0f0f0">产品编号</td>
-															<td style="PADDING-LEFT: 10px">索爱</td>
-														</tr>
-														<tr valign="top" bgcolor="#ffffff">
-															<td align="middle" width="90" bgcolor="#f0f0f0">产品名称</td>
-															<td style="PADDING-LEFT: 10px">索爱手机</td>
-														</tr>
-														<tr valign="top" bgcolor="#ffffff">
-															<td align="middle" width="90" bgcolor="#f0f0f0">产品品牌</td>
-															<td style="PADDING-LEFT: 10px">索爱</td>
-														</tr>
-														<tr valign="top" bgcolor="#ffffff">
-															<td align="middle" width="90" bgcolor="#f0f0f0">产品型号</td>
-															<td style="PADDING-LEFT: 10px">1980</td>
-														</tr>
-														<tr valign="top" bgcolor="#ffffff">
-															<td align="middle" width="90" bgcolor="#f0f0f0">产品价格</td>
-															<td style="PADDING-LEFT: 10px">5000.0</td>
-														</tr>
-														<tr valign="top" bgcolor="#ffffff">
-															<td align="middle" width="90" bgcolor="#f0f0f0">产品介绍</td>
-															<td style="PADDING-LEFT: 10px">索爱最近产品</td>
-														</tr>
-													</tbody>
-												</table>
-												<table cellspacing="2" cellpadding="0" width="100%"
-													border="0">
-													<tbody>
-														<tr valign="top">
-															<td background="商务信息网站套餐.files/line.gif" height="4"></td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+									<td align="left" valign="top">
+									<p class="d061">说起索尼的W系列相机，相信大家都不会感到陌生，其不错的功能表现外加时尚前卫的外形设计，一度颇受消费者认可。今日，笔者从索尼专卖处获悉，其对W系低端机型W55推出1550元的促销价格，附送一张512M的记忆棒，颇为超值，感兴趣的读者可以关注一下。</p>
+									<p class="d061">&nbsp;&nbsp;&nbsp;&nbsp;<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;</p>
 									</td>
 								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-				</tbody>
+							</table>
+							<p><img
+								src="image/n10.jpg" width="165" height="72" /></p>
+							<p>2007-10-07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+							</td>
+						</tr>
+						
+					</table>
+					</td>
+				</tr>
 			</table>
-			</td>
-		</TR>
-	</TBODY>
-</TABLE>
+			
+			<!--    右侧显示区域   结束-->
+
 
 <link href="image/css.css" rel="stylesheet" type="text/css" />
 <style type="text/css">

@@ -4,7 +4,7 @@
 
 function openChat(){
 
-	window.open("chat/index.html","","left=250   top=200   width=500   height=400");
+	window.open("chat/index.jsp","","left=250   top=200   width=500   height=400");
 }
 </script>
 <table width="799" border="0" align="center" cellpadding="0"
@@ -42,15 +42,15 @@ function openChat(){
 			<img src="image/d_r3_c1.jpg" width="60" height="40" />
 			<img src="image/top_red.jpg" width="20" height="40" border="0" />
 			<img src="image/top_red.jpg" width="20" height="40" border="0" />
-			<a href="index.html"><img src="image/d_r3_c5.jpg" width="64"
+			<a href="index.jsp"><img src="image/d_r3_c5.jpg" width="64"
 					height="40" border="0" />
 			</a>
 			<img src="image/top_red.jpg" width="20" height="40" border="0" />
-			<a href="showProductList.html"><img src="image/d_r3_c7.jpg"
+			<a href="showProductList.jsp"><img src="image/d_r3_c7.jpg"
 					name="image1" width="94" height="40" border="0" id="image1" />
 			</a>
 			<img src="image/top_red.jpg" width="20" height="40" border="0" />
-			<a href="showNewsList.html"><img src="image/d_r3_c8.jpg"
+			<a href="showNewsList.jsp"><img src="image/d_r3_c8.jpg"
 					width="93" height="40" border="0" />
 			</a>
 			<img src="image/top_red.jpg" width="20" height="40" border="0" />
@@ -58,7 +58,7 @@ function openChat(){
 					width="95" height="40" border="0" />
 			</a>
 			<img src="image/top_red.jpg" width="20" height="40" border="0" />
-			<a href="messageBoard.html" target="_blank"><img
+			<a href="messageBoard.jsp" target="_blank"><img
 					src="image/d_r3_c10.jpg" width="93" height="40" border="0" />
 			</a>
 			<img src="image/top_red.jpg" width="20" height="40" border="0" />

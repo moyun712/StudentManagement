@@ -1,4 +1,4 @@
-
+<%@ page language="java" pageEncoding="gbk"%>
 
 <html>
 	<head>
@@ -32,7 +32,7 @@
 							<td width='11' background='img/1/titlemu_1.gif'></td>
 							<td width='*' background='img/1/titlemu_2.gif'>
 								<div align='center'>
-									<a href='newMessage.html' class=jdmenu><b>新留言</b>
+									<a href='newMessage.jsp' class=jdmenu><b>新留言</b>
 									</a>
 								</div>
 							</td>
@@ -92,7 +92,7 @@
 							<TD width='53%' height='25' align=left valign='top'
 								class='jd_tab'>
 								<a
-									href='revertMessage.html?messageID=1'>
+									href='revertMessage.jsp?messageID=1'>
 									<img src='img/1/jd-to.gif' border='0'>&nbsp;价格最低的MP4
 								</a>
 							</TD>
@@ -114,7 +114,7 @@
 							<TD width='53%' height='25' align=left valign='top'
 								class='jd_tab'>
 								<a
-									href='revertMessage.html?messageID=2'>
+									href='revertMessage.jsp?messageID=2'>
 									<img src='img/1/jd-to.gif' border='0'>&nbsp;品红服务宗旨是什么
 								</a>
 							</TD>
@@ -136,7 +136,7 @@
 							<TD width='53%' height='25' align=left valign='top'
 								class='jd_tab'>
 								<a
-									href='revertMessage.html?messageID=3'>
+									href='revertMessage.jsp?messageID=3'>
 									<img src='img/1/jd-to.gif' border='0'>&nbsp;aa
 								</a>
 							</TD>

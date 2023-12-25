@@ -1,3 +1,4 @@
+<%@ page language="java" pageEncoding="gbk"%>
 
 <html>
 
@@ -42,19 +43,19 @@ function openChat(){
 		<td><img src="image/d_r3_c1.jpg" width="60" height="40" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><a
-			href="index.html"><img src="image/d_r3_c5.jpg" width="64"
+			href="index.jsp"><img src="image/d_r3_c5.jpg" width="64"
 			height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="showProductList.html"><img
+			height="40" border="0" /><a href="showProductList.jsp"><img
 			src="image/d_r3_c7.jpg" name="image1" width="94" height="40"
 			border="0" id="image1" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="showNewsList.html"><img
+			height="40" border="0" /><a href="showNewsList.jsp"><img
 			src="image/d_r3_c8.jpg" width="93" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><a
 			href="#" onclick="openChat()"><img src="image/d_r3_c9.jpg" width="95"
 			height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="messageBoard.html" target="_blank"><img
+			height="40" border="0" /><a href="messageBoard.jsp" target="_blank"><img
 			src="image/d_r3_c10.jpg" width="93" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
-			height="40" border="0" /><a href="login.html"><img src="image/d_r3_c13.jpg"
+			height="40" border="0" /><a href="login.jsp"><img src="image/d_r3_c13.jpg"
 			width="85" height="40" border="0" /></a><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/top_red.jpg" width="20"
 			height="40" border="0" /><img src="image/d_r3_c25.jpg"
@@ -69,8 +70,9 @@ function openChat(){
 	background=zjej/btmunu.gif border=0>
 	<TBODY>
 		<TR vAlign=bottom>
-			<TD>&nbsp;&nbsp;<A class=nav href="index.asp">首页</A><FONT
-				class=nav> &gt; </FONT><A class=nav href="qyjz.asp">企业建站</A></TD>
+			<TD>&nbsp;&nbsp;<A class=nav href="index.jsp">首页</A><FONT
+				class=nav> &gt; </FONT><A class=nav href="showProductList.jsp">商品展示</A><FONT
+				class=nav> &gt; </FONT>商品信息</TD>
 		</TR>
 	</TBODY>
 </TABLE>
@@ -90,10 +92,10 @@ function openChat(){
 <link href="image/css.css" rel="stylesheet" type="text/css" />
 <table width="193" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td align="center" valign="middle"><a href="showNewsList.html"><img src="image/cg1_r1_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="showNewsList.jsp"><img src="image/cg1_r1_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
 	  <tr>
-        <td align="center" valign="middle"><a href="showProductList.html"><img src="image/cg1_r2_c2.jpg" width="175" height="25" border="0" /></a></td>
+        <td align="center" valign="middle"><a href="showProductList.jsp"><img src="image/cg1_r2_c2.jpg" width="175" height="25" border="0" /></a></td>
       </tr>
       <tr>
         <td align="center" valign="middle"><a href="after.jsp"><img src="image/cg1_r4_c2.jpg" width="175" height="25" border="0" /></a></td>
@@ -136,57 +138,77 @@ function openChat(){
 </TD>
 			<TD vAlign=top width=3 bgColor=#e8e8e8></TD>
 			<td valign="top" bgcolor="#ffffff" height="300">
-			<form action="admin/adminLoginManage.jsp" method="post" name="form1">//缺少一个管理员登录的jsp文件
-				<table width="399" border="0" align="center" cellpadding="0"
-				cellspacing="0" bordercolor="#EBEBEB">
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
-				<tr align="left">
-					<td height="35" colspan="2" bgcolor="#EAF0FB" class="p16">
-					<div align="center"><span class="d6"><strong>管 理 
-					员 登 录 </strong></span></div>
-					</td>
-				</tr>
+			<table cellspacing="0" cellpadding="0" width="100%" align="center"
+				border="0">
+				<tbody>
+					<tr valign="top">
+						<td>
+						<table cellspacing="5" cellpadding="3" width="100%"
+							bgcolor="#ffffff" border="0">
+							<tbody>
+								
+								<tr>
+									<td valign="top" align="middle" width="150" height="100"><font
+										color="#000000"><img
+										style="BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000"
+										height="83" hspace="0" src="image/d_r11_10_r1_c221.jpg"
+										width="86" align="default" border="0" /></font></td>
+									<td height="100" valign="top">
+									<table height="100%" cellspacing="3" cellpadding="0"
+										width="100%" border="0">
+										<tbody>
 
-				<tr>
-					<td width="141" height="45" align="center" bgcolor="#EBEBEB"
-						class="d5">您的帐号：</td>
-					<td width="258" align="left" bgcolor="#EBEBEB"><input
-						name="userName" type="text" /></td>
-				</tr>
-				<tr>
-
-				</tr>
-				<tr>
-					<td height="45" align="center" bgcolor="#EBEBEB" class="d5">
-					您的密码：</td>
-					<td align="left" bordercolor="#EBEBEB" bgcolor="#EBEBEB"><input
-						name="password" type="password" size="21" /></td>
-				</tr>
-				<tr align="left">
-					<td height="35" colspan="2" align="right" bgcolor="#EAF0FB"
-						class="p16">
-					<div align="right"><span class="d6"><strong>&nbsp;</strong></span></div>
-					</td>
-				</tr>
-				<tr>
-					<td height="60" colspan="2" valign="bottom">
-					<div align="center"><input name="submit" type="submit"
-						class="d6" value="登  录" /> &nbsp;&nbsp;&nbsp;&nbsp; <input
-						name="reset" type="reset" class="d6" value="重  置" /></div>
-					</td>
-				</tr>
-				<tr>
-
-				</tr>				
-			</table></form>
+											<tr valign="top">
+												<td>
+												<table cellspacing="1" cellpadding="3" width="100%"
+													bgcolor="#cccccc" border="0">
+													<tbody>
+														<tr valign="top" bgcolor="#ffffff">
+															<td align="middle" width="90" bgcolor="#f0f0f0">产品编号</td>
+															<td style="PADDING-LEFT: 10px">索爱</td>
+														</tr>
+														<tr valign="top" bgcolor="#ffffff">
+															<td align="middle" width="90" bgcolor="#f0f0f0">产品名称</td>
+															<td style="PADDING-LEFT: 10px">索爱手机</td>
+														</tr>
+														<tr valign="top" bgcolor="#ffffff">
+															<td align="middle" width="90" bgcolor="#f0f0f0">产品品牌</td>
+															<td style="PADDING-LEFT: 10px">索爱</td>
+														</tr>
+														<tr valign="top" bgcolor="#ffffff">
+															<td align="middle" width="90" bgcolor="#f0f0f0">产品型号</td>
+															<td style="PADDING-LEFT: 10px">1980</td>
+														</tr>
+														<tr valign="top" bgcolor="#ffffff">
+															<td align="middle" width="90" bgcolor="#f0f0f0">产品价格</td>
+															<td style="PADDING-LEFT: 10px">5000.0</td>
+														</tr>
+														<tr valign="top" bgcolor="#ffffff">
+															<td align="middle" width="90" bgcolor="#f0f0f0">产品介绍</td>
+															<td style="PADDING-LEFT: 10px">索爱最近产品</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing="2" cellpadding="0" width="100%"
+													border="0">
+													<tbody>
+														<tr valign="top">
+															<td background="商务信息网站套餐.files/line.gif" height="4"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 			</td>
 		</TR>
 	</TBODY>

@@ -1,7 +1,6 @@
 <%@ page language="java" pageEncoding="gbk"%>
 <link href="image/css.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-
 <!--
 body {
 	margin-left: 0px;
