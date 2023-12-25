@@ -3,7 +3,7 @@ package utils;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 
 public class DBUtils {
 	
@@ -12,13 +12,13 @@ public class DBUtils {
      * @return Connection对象
      */
     public static Connection getConnection(){
-    	String dbUserName = "sa";
-    	String dbUserPasswd = "hellojava";
-    	String dbURL = "jdbc:mysql://localhost:3306/studentinfomanagement?"
+    	String dbUserName = "penghao712";
+    	String dbUserPasswd = "123456";
+    	String dbURL = "jdbc:mysql://localhost:3306/StudentInfoManagement?"
     	            + "user="+dbUserName+"&password="+dbUserPasswd+"&useUnicode=true&characterEncoding=UTF8";
     	Connection conn = null;
     	try {
-    		Class.forName("com.mysql.jdbc.Driver");
+    		Class.forName("com.mysql.cj.jdbc.Driver");
     		conn = (Connection) DriverManager.getConnection(dbURL,dbUserName,dbUserPasswd);
     	} catch (ClassNotFoundException | SQLException e) {
     		e.printStackTrace();

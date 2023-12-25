@@ -48,8 +48,8 @@
 						<ul class="submenu">
 							<li><a onclick="query_all('user')">查看所有用户</a></li>
 							<li><a onclick="show_insert_user()">新增用户信息</a></li>	
-							<li><a onclick="show_delete('user')">删除指定用户</a></li>				
-							<li><a onclick="show_alter('user')">修改用户信息</a></li>							
+							<li><a onclick="show_delete('User')">删除指定用户</a></li>
+							<li><a onclick="show_alter('User')">修改用户信息</a></li>
 						</ul>
 					</li>
 					<li>

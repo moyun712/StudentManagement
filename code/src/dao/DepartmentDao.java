@@ -4,8 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 import model.Department;
 import utils.DBUtils;
@@ -14,7 +14,7 @@ public class DepartmentDao {
 	//查询所有的系信息，查询返回一个含值的ArrayList,当为空值的说明表中无数据元组
 	public ArrayList<Department> query_all_department() {
 		Connection conn = DBUtils.getConnection();
-		String sql = "select * from department order by dno;";
+		String sql = "select * from Department order by Dno;";
 		ArrayList<Department> results = new ArrayList<Department>();
 		
 		try {
@@ -38,7 +38,7 @@ public class DepartmentDao {
 	//插入院系信息，返回一个int值表示状态,1：成功，0失败
 	public int insert_department(String dno,String dname){
 		Connection conn = DBUtils.getConnection();
-		String sql = "insert into department values(?,?);";
+		String sql = "insert into Department values(?,?);";
 		int flag = 0;
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
@@ -56,7 +56,7 @@ public class DepartmentDao {
 	//删除院系信息，返回一个int值表示状态,1：成功，0失败
 	public int delete_department(String dno) {
 		Connection conn = DBUtils.getConnection();
-		String sql = "delete from department where dno = ?;";
+		String sql = "delete from Department where Dno = ?;";
 		int flag = 0;
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
@@ -73,7 +73,7 @@ public class DepartmentDao {
 	//修改院系信息，返回一个int值表示状态,1：成功，0失败
 	public int alter_department(String dno,String after_dno,String after_dname) {
 		Connection conn = DBUtils.getConnection();
-		String sql = "update department set dno = ?,dname = ? where dno = ?;";
+		String sql = "update Department set Dno = ?,Dname = ? where Dno = ?;";
 		int flag = 0;
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);

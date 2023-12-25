@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import dao.ClassDao;
 import dao.CourseDao;
@@ -215,8 +215,8 @@ public class AdminDao extends HttpServlet {
 	protected void insert_department(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String dno = request.getParameter("dno");
-		String dname = request.getParameter("dname");
+		String dno = request.getParameter("Dno");
+		String dname = request.getParameter("Dname");
 		int flag = new DepartmentDao().insert_department(dno, dname);
 		String info = null;
 		PrintWriter out = response.getWriter();
@@ -299,9 +299,9 @@ public class AdminDao extends HttpServlet {
 	protected void insert_class(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String clno = request.getParameter("clno");
-		String clname = request.getParameter("clname");
-		String dno = request.getParameter("dno");
+		String clno = request.getParameter("Clno");
+		String clname = request.getParameter("Clname");
+		String dno = request.getParameter("Dno");
 		int flag = new ClassDao().insert_class(clno, clname, dno);
 		String info = null;
 		PrintWriter out = response.getWriter();
@@ -387,11 +387,11 @@ public class AdminDao extends HttpServlet {
 	protected void insert_student(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String sno = request.getParameter("sno");
-		String sname = request.getParameter("sname");
-		String ssex = request.getParameter("ssex");
-		int sage = Integer.parseInt(request.getParameter("sage"));
-		String clno = request.getParameter("clno");
+		String sno = request.getParameter("Sno");
+		String sname = request.getParameter("Sname");
+		String ssex = request.getParameter("Ssex");
+		int sage = Integer.parseInt(request.getParameter("Sage"));
+		String clno = request.getParameter("Clno");
 		int flag = new StudentDao().insert_student(sno, sname, ssex, sage, clno);
 		String info = null;
 		PrintWriter out = response.getWriter();
@@ -410,7 +410,7 @@ public class AdminDao extends HttpServlet {
 	protected void delete_student(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String sno = request.getParameter("sno");
+		String sno = request.getParameter("Sno");
 		int flag = new StudentDao().delete_student(sno);
 		String info = null;
 		PrintWriter out = response.getWriter();
@@ -429,7 +429,7 @@ public class AdminDao extends HttpServlet {
 	protected void alter_student(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String sno = request.getParameter("sno");
+		String sno = request.getParameter("Sno");
 		String after_sno = request.getParameter("after_sno");
 		String after_sname = request.getParameter("after_sname");
 		String after_ssex = request.getParameter("after_ssex");
@@ -499,7 +499,7 @@ public class AdminDao extends HttpServlet {
 	// 查询课程排名
 	protected void course_ranking(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String Cno = request.getParameter("cno");
+		String Cno = request.getParameter("Cno");
 		ArrayList<Course_ranking> results = new CourseDao().course_ranking(Cno);
 		PrintWriter out = response.getWriter();
 		// 输出结果
@@ -551,10 +551,10 @@ public class AdminDao extends HttpServlet {
 	//插入课程
 	protected void insert_course(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String Cno = request.getParameter("cno");
-		String Cname = request.getParameter("cname");
-		String Cteacher = request.getParameter("cteacher");
-		int Ccredit = Integer.parseInt(request.getParameter("ccredit"));
+		String Cno = request.getParameter("Cno");
+		String Cname = request.getParameter("Cname");
+		String Cteacher = request.getParameter("Cteacher");
+		int Ccredit = Integer.parseInt(request.getParameter("Ccredit"));
 		int flag =  new CourseDao().insert_course(Cno, Cname, Cteacher, Ccredit);
 		String info = null;
 		PrintWriter out =  response.getWriter();
@@ -592,7 +592,7 @@ public class AdminDao extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
 		
-		String cno = request.getParameter("cno");
+		String cno = request.getParameter("Cno");
 		String after_cno = request.getParameter("after_cno");
 		String after_cname = request.getParameter("after_cname");
 		String after_cteacher = request.getParameter("after_cteacher");
@@ -643,9 +643,9 @@ public class AdminDao extends HttpServlet {
 	protected void insert_sc(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String sno = request.getParameter("sno");
-		String cno = request.getParameter("cno");
-		double grade = Double.parseDouble(request.getParameter("grade"));
+		String sno = request.getParameter("Sno");
+		String cno = request.getParameter("Cno");
+		double grade = Double.parseDouble(request.getParameter("Grade"));
 		int flag = new SCDao().insert_sc(sno, cno, grade);
 		String info = null;
 		PrintWriter out = response.getWriter();
@@ -664,8 +664,8 @@ public class AdminDao extends HttpServlet {
 	protected void delete_sc(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String sno = request.getParameter("sno");
-		String cno = request.getParameter("cno");
+		String sno = request.getParameter("Sno");
+		String cno = request.getParameter("Cno");
 		int flag = new SCDao().delete_sc(sno, cno);
 		String info = null;
 		PrintWriter out = response.getWriter();
@@ -684,8 +684,8 @@ public class AdminDao extends HttpServlet {
 	protected void alter_sc(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String sno = request.getParameter("sno");
-		String cno = request.getParameter("cno");
+		String sno = request.getParameter("Sno");
+		String cno = request.getParameter("Cno");
 		double after_grade = Double.parseDouble(request.getParameter("after_grade"));
 		int flag = new SCDao().alter_sc(sno, cno, after_grade);
 		String info = null;

@@ -4,8 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 import model.Course;
 import model.Course_avg;
@@ -17,7 +17,7 @@ public class CourseDao {
 	// 获取所有课程的信息，用ArrayList返回
 	public ArrayList<Course> query_all_course() {
 		Connection conn = DBUtils.getConnection();
-		String sql = "select * from course order by cno;";
+		String sql = "select * from Course order by cno;";
 		ArrayList<Course> results = new ArrayList<Course>();
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
@@ -43,7 +43,7 @@ public class CourseDao {
 	// 插入课程信息，返回一个int值表示状态,1：成功，0失败
 	public int insert_course(String Cno, String Cname, String Cteacher, double Ccredit) {
 		Connection conn = DBUtils.getConnection();
-		String sql = "insert into course values(?,?,?,?);";
+		String sql = "insert into Course values(?,?,?,?);";
 		int flag = 0;
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
@@ -63,7 +63,7 @@ public class CourseDao {
 	// 删除课程信息，返回一个int值表示状态,1：成功，0失败
 	public int delete_course(String Cno) {
 		Connection conn = DBUtils.getConnection();
-		String sql = "delete from course where Cno = ?;";
+		String sql = "delete from Course where Cno = ?;";
 		int flag = 0;
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
@@ -80,7 +80,7 @@ public class CourseDao {
 	//修改课程信息，返回一个int值表示状态,1：成功，0失败
 	public int alter_course(String cno,String after_cno,String after_cname,String after_cteacher,double after_ccredit) {
 		Connection conn = DBUtils.getConnection();
-		String sql = "update course set cno = ?,cname = ?,cteacher = ?,ccredit = ? where cno = ?;";
+		String sql = "update Course set Cno = ?,Cname = ?,Cteacher = ?,Ccredit = ? where Cno = ?;";
 		int flag = 0;
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
@@ -101,7 +101,7 @@ public class CourseDao {
 	// 查询课程平均分信息，返回一个ArrayLst集合
 	public ArrayList<Course_avg> course_avg() {
 		Connection conn = DBUtils.getConnection();
-		String sql = "select sc.cno cno,cname,avg(grade) avg from course,sc where course.cno = sc.cno group by cno order by cno;";
+		String sql = "select Sc.Cno Cno,Cname,avg(Grade) avg from Course,Sc where Course.Cno = Sc.Cno group by Cno order by Cno;";
 		ResultSet result = null;
 		ArrayList<Course_avg> course_avg = new ArrayList<Course_avg>();
 		try {
@@ -126,7 +126,7 @@ public class CourseDao {
 	//查询课程不及格率，返回一个ArrayList集合
 	public ArrayList<Course_fail_rate> fail_rate(){
 		Connection conn = DBUtils.getConnection();
-		String sql = "select cno,(select cname from course where cno = x.cno) cname,cast(100.0*(select count(sno) from sc where grade < 60 and cno = x.cno)/(select count(sno) from sc where cno = x.cno) as decimal(18,2)) rate from sc x group by cno order by cno;";
+		String sql = "select Cno,(select Cname from Course where Cno = x.Cno) Cname,cast(100.0*(select count(Sno) from Sc where Grade < 60 and Cno = x.cno)/(select count(Sno) from Sc where Cno = x.Cno) as decimal(18,2)) rate from Sc x group by Cno order by Cno;";
 		ArrayList<Course_fail_rate> fail_rate = new ArrayList<Course_fail_rate>();
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
@@ -150,7 +150,7 @@ public class CourseDao {
 	//查询课程排名情况,返回一个ArrayList集合
 	public ArrayList<Course_ranking> course_ranking(String cno){
 		Connection conn = DBUtils.getConnection();
-		String sql = "select student.Sno Sno,Dname,Clname,Sname,Ssex,Sage,Grade from department,class,student,sc where student.sno = sc.sno and class.Clno = student.Clno and department.Dno = class.Dno and cno = '"+cno+"' order by grade desc;";
+		String sql = "select Student.Sno Sno,Dname,Clname,Sname,Ssex,Sage,Grade from Department,Class,Student,sc where Student.Sno = Sc.Sno and class.Clno = student.Clno and department.Dno = class.Dno and cno = '"+cno+"' order by Grade desc;";
 		ArrayList<Course_ranking> course_ranking = new ArrayList<Course_ranking>();
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
