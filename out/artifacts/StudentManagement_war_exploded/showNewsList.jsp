@@ -1,3 +1,6 @@
+<%@ page import="dao.NewsDao" %>
+<%@ page import="model.News" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page language="java" pageEncoding="gbk"%>
 
 
@@ -134,77 +137,25 @@ function openChat(){
 				border="0">
 				<tbody>
 					<th colspan="3" align="left">&nbsp;&nbsp;&nbsp;新闻列表</th>
-					
+
+					<%
+						NewsDao newsDao = new NewsDao();
+						ArrayList<News> list = newsDao.getAllNews();
+						int i=1;
+						for(News news:list){
+					%>
+
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">1</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=11">索尼W55降价送卡
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-07]</font></a></td>
+						<td height="30" width="10%"><%=i%></td>
+						<td width="85%"><a href="detailNews.jsp?newsID=<%=news.getId()%>"><%=news.getTitle()%>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[<%=news.getTime()%>]</font></a></td>
 					</tr>
-					
-					<tr valign="top" align="left" bgcolor="#ffffff">
-						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">2</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=10">理光R5不到二千
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-06]</font></a></td>
-					</tr>
-					
-					<tr valign="top" align="left" bgcolor="#ffffff">
-						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">3</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=9">MP4关注度排行TOP10
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-05]</font></a></td>
-					</tr>
-					
-					<tr valign="top" align="left" bgcolor="#ffffff">
-						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">4</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=8">单反与镜头组合
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-05]</font></a></td>
-					</tr>
-					
-					<tr valign="top" align="left" bgcolor="#ffffff">
-						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">5</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=7">国庆各品牌最好卖的相机
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-04]</font></a></td>
-					</tr>
-					
-					<tr valign="top" align="left" bgcolor="#ffffff">
-						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">6</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=6">国庆期间降价最猛八款数码相机
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-03]</font></a></td>
-					</tr>
-					
-					<tr valign="top" align="left" bgcolor="#ffffff">
-						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">7</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=5">三星女性翻盖E428行货仅1180
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-02]</font></a></td>
-					</tr>
-					
-					<tr valign="top" align="left" bgcolor="#ffffff">
-						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">8</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=4">时尚浪漫情侣手机配对推荐
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-01]</font></a></td>
-					</tr>
-					
-					<tr valign="top" align="left" bgcolor="#ffffff">
-						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">9</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=3">黄金周最热销手机汇总导购
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-10-01]</font></a></td>
-					</tr>
-					
-					<tr valign="top" align="left" bgcolor="#ffffff">
-						<td height="30" width="5%">&nbsp;</td>
-						<td height="30" width="10%">10</td>
-						<td width="85%"><a href="detailNews.jsp?newsID=2">爱国者数码相机今日七折优惠
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[2007-09-30]</font></a></td>
-					</tr>
-					
+					<%
+							i++;
+						}
+					%>
+
 					<tr valign="bottom" align="right">
 						<td colspan="3" width="100%">&nbsp;&nbsp;&nbsp;&nbsp;<a
 							href="showNewsList.jsp?page=1">上一页</a>| <a

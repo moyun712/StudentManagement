@@ -104,7 +104,7 @@ function openChat(){
 
           %>
           <tr>
-            <td height="26" colspan="2"> &nbsp;<a href="detailNews.jsp?newsID=<%=news.getId()%>" class="dong06"><%=news.getTitle()%>&nbsp;&nbsp;&nbsp;<font color="#ff0000"><%news.getTime();%></font></a></td>
+            <td height="26" colspan="2"> &nbsp;<a href="detailNews.jsp?id=<%=news.getId()%>" class="dong06"><%=news.getTitle()%>&nbsp;&nbsp;&nbsp;<font color="#ff0000"><%news.getTime();%></font></a></td>
           </tr>
           <tr>
             <td colspan="2"><img src="image/d03.jpg" width="352" height="1" /></td>

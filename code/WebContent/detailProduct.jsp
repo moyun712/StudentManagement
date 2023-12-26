@@ -1,3 +1,5 @@
+<%@ page import="dao.ProductDao" %>
+<%@ page import="model.Product" %>
 <%@ page language="java" pageEncoding="gbk"%>
 
 <html>
@@ -143,6 +145,11 @@ function openChat(){
 				<tbody>
 					<tr valign="top">
 						<td>
+							<%
+								String id = request.getParameter("productID");
+								ProductDao productDao = new ProductDao();
+								Product product = productDao.getProductbyId(id);
+							%>
 						<table cellspacing="5" cellpadding="3" width="100%"
 							bgcolor="#ffffff" border="0">
 							<tbody>
@@ -151,7 +158,7 @@ function openChat(){
 									<td valign="top" align="middle" width="150" height="100"><font
 										color="#000000"><img
 										style="BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000"
-										height="83" hspace="0" src="image/d_r11_10_r1_c221.jpg"
+										height="83" hspace="0" src="<%=product.getPicture()%>"
 										width="86" align="default" border="0" /></font></td>
 									<td height="100" valign="top">
 									<table height="100%" cellspacing="3" cellpadding="0"
@@ -165,27 +172,27 @@ function openChat(){
 													<tbody>
 														<tr valign="top" bgcolor="#ffffff">
 															<td align="middle" width="90" bgcolor="#f0f0f0">产品编号</td>
-															<td style="PADDING-LEFT: 10px">索爱</td>
+															<td style="PADDING-LEFT: 10px"><%=id%></td>
 														</tr>
 														<tr valign="top" bgcolor="#ffffff">
 															<td align="middle" width="90" bgcolor="#f0f0f0">产品名称</td>
-															<td style="PADDING-LEFT: 10px">索爱手机</td>
+															<td style="PADDING-LEFT: 10px"><%=product.getName()%></td>
 														</tr>
 														<tr valign="top" bgcolor="#ffffff">
 															<td align="middle" width="90" bgcolor="#f0f0f0">产品品牌</td>
-															<td style="PADDING-LEFT: 10px">索爱</td>
+															<td style="PADDING-LEFT: 10px"><%=product.getBrand()%></td>
 														</tr>
 														<tr valign="top" bgcolor="#ffffff">
 															<td align="middle" width="90" bgcolor="#f0f0f0">产品型号</td>
-															<td style="PADDING-LEFT: 10px">1980</td>
+															<td style="PADDING-LEFT: 10px"><%=product.getType()%></td>
 														</tr>
 														<tr valign="top" bgcolor="#ffffff">
 															<td align="middle" width="90" bgcolor="#f0f0f0">产品价格</td>
-															<td style="PADDING-LEFT: 10px">5000.0</td>
+															<td style="PADDING-LEFT: 10px"><%=product.getPrice()%></td>
 														</tr>
 														<tr valign="top" bgcolor="#ffffff">
 															<td align="middle" width="90" bgcolor="#f0f0f0">产品介绍</td>
-															<td style="PADDING-LEFT: 10px">索爱最近产品</td>
+															<td style="PADDING-LEFT: 10px"><%=product.getContent()%></td>
 														</tr>
 													</tbody>
 												</table>

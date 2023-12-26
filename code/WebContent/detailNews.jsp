@@ -1,10 +1,8 @@
+<%@ page import="model.News" %>
+<%@ page import="dao.NewsDao" %>
 <%@ page language="java" pageEncoding="gbk"%>
 
-
 <html>
-
-
-
 <script type="text/javascript">
 
 function openChat(){
@@ -92,6 +90,11 @@ function openChat(){
 					<td align="center" valign="top" background="image/cg5.jpg"
 						bgcolor="#f4f4f4">
 <link href="image/css.css" rel="stylesheet" type="text/css" />
+						<%
+							int id = Integer.parseInt(request.getParameter("id"));
+							NewsDao newsDao = new NewsDao();
+							News news = newsDao.getNewsId(id);
+						%>
 <table width="193" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td align="center" valign="middle"><a href="showNewsList.jsp"><img src="image/cg1_r1_c2.jpg" width="175" height="25" border="0" /></a></td>
@@ -147,7 +150,7 @@ function openChat(){
 								<tr align="center" height="50">
 									<td valign="middle" colspan="2" background="image/cg2.jpg"><span
 										class="g03" style="font-weight: bold" >
-									索尼W55降价送卡</span></td>
+									<%=news.getTitle()%></span></td>
 								</tr>
 							</table>
 							</td>
@@ -157,7 +160,7 @@ function openChat(){
 							<table width="100%" border="0" cellspacing="32" cellpadding="0">
 								<tr>
 									<td align="left" valign="top">
-									<p class="d061">说起索尼的W系列相机，相信大家都不会感到陌生，其不错的功能表现外加时尚前卫的外形设计，一度颇受消费者认可。今日，笔者从索尼专卖处获悉，其对W系低端机型W55推出1550元的促销价格，附送一张512M的记忆棒，颇为超值，感兴趣的读者可以关注一下。</p>
+									<p class="d061"><%=news.getContent()%></p>
 									<p class="d061">&nbsp;&nbsp;&nbsp;&nbsp;<br />
 									&nbsp;&nbsp;&nbsp;&nbsp;</p>
 									</td>
@@ -165,7 +168,7 @@ function openChat(){
 							</table>
 							<p><img
 								src="image/n10.jpg" width="165" height="72" /></p>
-							<p>2007-10-07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+							<p><%=news.getTitle()%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 							</td>
 						</tr>
 						

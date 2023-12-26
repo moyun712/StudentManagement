@@ -1,4 +1,8 @@
-
+<%@ page import="model.News" %>
+<%@ page import="dao.NewsDao" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="model.Product" %>
+<%@ page import="dao.ProductDao" %>
 <%@ page language="java" pageEncoding="gbk"%>
 <html>
 
@@ -138,7 +142,11 @@ function openChat(){
 			<table cellspacing="0" cellpadding="4" width="100%" align="center"
 				border="0">
 				<tbody>
-					
+				<%
+					ProductDao productDao = new ProductDao();
+					ArrayList<Product> list = productDao.getAllProducts();
+					for(Product product:list){
+				%>
 					<tr>
 						<td valign="top" width="100%">
 						<table cellspacing="2" cellpadding="0" width="100%"
@@ -146,10 +154,10 @@ function openChat(){
 							<tbody>
 								<tr valign="top">
 									<td align="middle" width="106" height="93"><a
-										href="detailProduct.jsp?productID=10"><font
+										href="detailProduct.jsp?productID=<%=product.getId()%>"><font
 										color="#000000"><img
 										style="BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000"
-										height="65" hspace="0" src="image/d_r11_10_r1_c221.jpg"
+										height="65" hspace="0" src="<%=product.getPicture()%>"
 										width="70" align="center" border="0" /></font></a></td>
 									<td height="93">
 									<table cellspacing="1" cellpadding="4" width="100%"
@@ -163,17 +171,17 @@ function openChat(){
 														<tr bgcolor="#99ccff">
 															<td align="middle" width="80" bgcolor="#f0f0f0">产品名称</td>
 															<td width="120" bgcolor="#ffffff"><a
-																href="detailProduct.jsp?productID=10"><font
-																color="#000000">索爱手机</font></a></td>
+																href="detailProduct.jsp?productID=<%=product.getId()%>"><font
+																color="#000000"><%=product.getName()%></font></a></td>
 															<td align="middle" width="80" bgcolor="#f0f0f0">产品品牌</td>
-															<td bgcolor="#ffffff"><font color="#ff0033">索爱</font></td>
+															<td bgcolor="#ffffff"><font color="#ff0033"><%=product.getBrand()%></font></td>
 														</tr>
 														<tr style="DISPLAY: block" bgcolor="#99ccff">
 															<td align="middle" width="80" bgcolor="#f0f0f0">产品型号</td>
-															<td bgcolor="#ffffff">索爱</td>
+															<td bgcolor="#ffffff"><%=product.getType()%></td>
 															<td align="middle" width="80" bgcolor="#f0f0f0">产品价格</td>
 															<td bgcolor="#ffffff"><font color="#ff0033">
-															5000.00</font>元</td>
+															<%=product.getPrice()%></font>元</td>
 														</tr>
 													</tbody>
 												</table>
@@ -189,210 +197,10 @@ function openChat(){
 						</table>
 						</td>
 					</tr>
-					
-					<tr>
-						<td valign="top" width="100%">
-						<table cellspacing="2" cellpadding="0" width="100%"
-							bgcolor="#ffffff" border="0">
-							<tbody>
-								<tr valign="top">
-									<td align="middle" width="106" height="93"><a
-										href="detailProduct.jsp?productID=7"><font
-										color="#000000"><img
-										style="BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000"
-										height="65" hspace="0" src="image/d_r11_10_r1_c116.jpg"
-										width="70" align="center" border="0" /></font></a></td>
-									<td height="93">
-									<table cellspacing="1" cellpadding="4" width="100%"
-										bgcolor="#cccccc" border="0">
-										<tbody>
-											<tr valign="top" align="right" bgcolor="#ffffff">
-												<td height="30">
-												<table height="28" cellspacing="1" cellpadding="4"
-													width="100%" bgcolor="#cccccc" border="0">
-													<tbody>
-														<tr bgcolor="#99ccff">
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品名称</td>
-															<td width="120" bgcolor="#ffffff"><a
-																href="detailProduct.jsp?productID=7"><font
-																color="#000000">数码相机</font></a></td>
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品品牌</td>
-															<td bgcolor="#ffffff"><font color="#ff0033">柯达</font></td>
-														</tr>
-														<tr style="DISPLAY: block" bgcolor="#99ccff">
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品型号</td>
-															<td bgcolor="#ffffff">柯达</td>
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品价格</td>
-															<td bgcolor="#ffffff"><font color="#ff0033">
-															8000.00</font>元</td>
-														</tr>
-													</tbody>
-												</table>
 
-
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					
-					<tr>
-						<td valign="top" width="100%">
-						<table cellspacing="2" cellpadding="0" width="100%"
-							bgcolor="#ffffff" border="0">
-							<tbody>
-								<tr valign="top">
-									<td align="middle" width="106" height="93"><a
-										href="detailProduct.jsp?productID=6"><font
-										color="#000000"><img
-										style="BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000"
-										height="65" hspace="0" src="image/d_r11_10_r1_c81.jpg"
-										width="70" align="center" border="0" /></font></a></td>
-									<td height="93">
-									<table cellspacing="1" cellpadding="4" width="100%"
-										bgcolor="#cccccc" border="0">
-										<tbody>
-											<tr valign="top" align="right" bgcolor="#ffffff">
-												<td height="30">
-												<table height="28" cellspacing="1" cellpadding="4"
-													width="100%" bgcolor="#cccccc" border="0">
-													<tbody>
-														<tr bgcolor="#99ccff">
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品名称</td>
-															<td width="120" bgcolor="#ffffff"><a
-																href="detailProduct.jsp?productID=6"><font
-																color="#000000">摄像机</font></a></td>
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品品牌</td>
-															<td bgcolor="#ffffff"><font color="#ff0033">松下</font></td>
-														</tr>
-														<tr style="DISPLAY: block" bgcolor="#99ccff">
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品型号</td>
-															<td bgcolor="#ffffff">松下</td>
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品价格</td>
-															<td bgcolor="#ffffff"><font color="#ff0033">
-															8000.00</font>元</td>
-														</tr>
-													</tbody>
-												</table>
-
-
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					
-					<tr>
-						<td valign="top" width="100%">
-						<table cellspacing="2" cellpadding="0" width="100%"
-							bgcolor="#ffffff" border="0">
-							<tbody>
-								<tr valign="top">
-									<td align="middle" width="106" height="93"><a
-										href="detailProduct.jsp?productID=5"><font
-										color="#000000"><img
-										style="BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000"
-										height="65" hspace="0" src="image/d_r11_10_r1_c2.jpg"
-										width="70" align="center" border="0" /></font></a></td>
-									<td height="93">
-									<table cellspacing="1" cellpadding="4" width="100%"
-										bgcolor="#cccccc" border="0">
-										<tbody>
-											<tr valign="top" align="right" bgcolor="#ffffff">
-												<td height="30">
-												<table height="28" cellspacing="1" cellpadding="4"
-													width="100%" bgcolor="#cccccc" border="0">
-													<tbody>
-														<tr bgcolor="#99ccff">
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品名称</td>
-															<td width="120" bgcolor="#ffffff"><a
-																href="detailProduct.jsp?productID=5"><font
-																color="#000000">笔记本</font></a></td>
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品品牌</td>
-															<td bgcolor="#ffffff"><font color="#ff0033">IBM</font></td>
-														</tr>
-														<tr style="DISPLAY: block" bgcolor="#99ccff">
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品型号</td>
-															<td bgcolor="#ffffff">IBM</td>
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品价格</td>
-															<td bgcolor="#ffffff"><font color="#ff0033">
-															8000.00</font>元</td>
-														</tr>
-													</tbody>
-												</table>
-
-
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					
-					<tr>
-						<td valign="top" width="100%">
-						<table cellspacing="2" cellpadding="0" width="100%"
-							bgcolor="#ffffff" border="0">
-							<tbody>
-								<tr valign="top">
-									<td align="middle" width="106" height="93"><a
-										href="detailProduct.jsp?productID=4"><font
-										color="#000000"><img
-										style="BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000"
-										height="65" hspace="0" src="image/d_r11_10_r1_c22.jpg"
-										width="70" align="center" border="0" /></font></a></td>
-									<td height="93">
-									<table cellspacing="1" cellpadding="4" width="100%"
-										bgcolor="#cccccc" border="0">
-										<tbody>
-											<tr valign="top" align="right" bgcolor="#ffffff">
-												<td height="30">
-												<table height="28" cellspacing="1" cellpadding="4"
-													width="100%" bgcolor="#cccccc" border="0">
-													<tbody>
-														<tr bgcolor="#99ccff">
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品名称</td>
-															<td width="120" bgcolor="#ffffff"><a
-																href="detailProduct.jsp?productID=4"><font
-																color="#000000">手机</font></a></td>
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品品牌</td>
-															<td bgcolor="#ffffff"><font color="#ff0033">摩托罗拉</font></td>
-														</tr>
-														<tr style="DISPLAY: block" bgcolor="#99ccff">
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品型号</td>
-															<td bgcolor="#ffffff">摩托罗拉</td>
-															<td align="middle" width="80" bgcolor="#f0f0f0">产品价格</td>
-															<td bgcolor="#ffffff"><font color="#ff0033">
-															8000.00</font>元</td>
-														</tr>
-													</tbody>
-												</table>
-
-
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
+				<%
+					}
+				%>
 					
 					<tr valign="bottom" align="right">
 						<td colspan="3" width="100%">&nbsp;&nbsp;&nbsp;&nbsp;<a
