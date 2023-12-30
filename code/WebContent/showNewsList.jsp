@@ -148,7 +148,7 @@ function openChat(){
 					<tr valign="top" align="left" bgcolor="#ffffff">
 						<td height="30" width="5%">&nbsp;</td>
 						<td height="30" width="10%"><%=i%></td>
-						<td width="85%"><a href="detailNews.jsp?newsID=<%=news.getId()%>"><%=news.getTitle()%>
+						<td width="85%"><a href="detailNews.jsp?id=<%=news.getId()%>"><%=news.getTitle()%>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">[<%=news.getTime()%>]</font></a></td>
 					</tr>
 					<%

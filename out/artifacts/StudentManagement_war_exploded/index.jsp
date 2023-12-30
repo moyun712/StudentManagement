@@ -39,15 +39,12 @@ function openChat(){
 <table width="799" border="0" align="center" cellpadding="0"
 	cellspacing="0">
 	<tr>
-		<td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-			codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
-			width="799" height="161" title="pinhong">
-			<param name="movie" value="image/2.swf" />
-			<param name="quality" value="high" />
-			<embed src="image/2.swf" quality="high"
-				pluginspage="http://www.macromedia.com/go/getflashplayer"
-				type="application/x-shockwave-flash" width="799" height="161"></embed>
-		</object></td>
+		<td>
+            <vedio width="799px" height="161px" controls >
+                <source src="movie.mp4" type="video/mp4">
+                您的浏览器不支持 video 标签.
+            </vedio>
+        </td>
 	</tr>
 </table>
 <table width="799" border="0" align="center" cellpadding="0"

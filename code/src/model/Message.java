@@ -6,12 +6,31 @@ import java.time.LocalDateTime;
 public class Message implements Serializable {
     private int mid;
     private String title;
+
+    public Message(int mid, String title, String content, String name, String time, int count) {
+        this.mid = mid;
+        this.title = title;
+        this.content = content;
+        this.name = name;
+        this.time = time;
+        this.count = count;
+    }
+
     private String content;
     private String name;
-    private LocalDateTime time;
+    private String time;
     int count;
     private static final long serialVersionUID = 1L;
     public Message(){}
+
+    public Message(String name, String title, String content, String time, int count) {
+        this.title = title;
+        this.content = content;
+        this.name = name;
+        this.time = time;
+        this.count = count;
+    }
+
     public int getMid() {
         return mid;
     }
@@ -44,11 +63,11 @@ public class Message implements Serializable {
         this.name = name;
     }
 
-    public LocalDateTime getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalDateTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 

@@ -18,6 +18,14 @@
     <servlet-name>UserExitServlet</servlet-name>
     <url-pattern>/UserExitServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>saveMessage</servlet-name>
+    <servlet-class>service.SaveMessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>saveMessage</servlet-name>
+    <url-pattern>/saveMessage</url-pattern>
+  </servlet-mapping>
 
 
 

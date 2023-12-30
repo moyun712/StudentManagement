@@ -33,7 +33,7 @@
 				</tr>
 			</table>
 			
-			<div align='center' style='width=750'>
+			<div align='center' style='width:750px'>
 				<div align='left'>
 					<table width='%' height='20' border='0' cellpadding='0'
 						cellspacing='0'>

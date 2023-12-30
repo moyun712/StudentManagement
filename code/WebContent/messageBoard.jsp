@@ -1,3 +1,6 @@
+<%@ page import="model.Message" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="dao.MessageDao" %>
 <%@ page language="java" pageEncoding="gbk"%>
 
 <html>
@@ -24,7 +27,7 @@
 				</tr>
 
 			</table>
-			<div align='center' style='width=750'>
+			<div align='center' style='width:750px'>
 				<div align='left'>
 					<table width='%' height='20' border='0' cellpadding='0'
 						cellspacing='0'>
@@ -41,7 +44,7 @@
 					</table>
 				</div>
 			</div>
-			<form name='form' method='post' action='index.asp'
+			<form name='form' method='post' action='index.jsp'
 				onSubmit='submitonce(this)'>
 				<TABLE width='750' border=0 align='center' cellPadding=0
 					cellSpacing=0 borderColor=#111111 style='BORDER-COLLAPSE: collapse'>
@@ -83,17 +86,24 @@
 								</div>
 							</TD>
 						</TR>
-						
+
+
+						<%
+							MessageDao messageDao = new MessageDao();
+							ArrayList<Message> list = messageDao.getAllMessage();
+							for(Message message : list){
+
+						%>
 						<TR class=unnamed1>
 							<TD width='6%' height='25' align=middle valign='top'
 								class='jd_tab'>
-								1
+								<%=message.getCount()%>
 							</TD>
 							<TD width='53%' height='25' align=left valign='top'
 								class='jd_tab'>
 								<a
-									href='revertMessage.jsp?messageID=1'>
-									<img src='img/1/jd-to.gif' border='0'>&nbsp;价格最低的MP4
+									href='revertMessage.jsp?messageID=<%=message.getMid()%>'>
+									<img src='img/1/jd-to.gif' border='0'>&nbsp;<%=message.getTitle()%>
 								</a>
 							</TD>
 							<TD width='20%' height='25' align=middle valign='top'
@@ -102,54 +112,12 @@
 							</TD>
 							<TD width='14%' height='25' align=left valign='top'
 								class='jd_tab'>
-								<font color=#666666>2007-10-04 </font>
+								<font color=#666666><%=message.getTime()%> </font>
 							</TD>
 						</TR>
-						
-						<TR class=unnamed1>
-							<TD width='6%' height='25' align=middle valign='top'
-								class='jd_tab'>
-								1
-							</TD>
-							<TD width='53%' height='25' align=left valign='top'
-								class='jd_tab'>
-								<a
-									href='revertMessage.jsp?messageID=2'>
-									<img src='img/1/jd-to.gif' border='0'>&nbsp;品红服务宗旨是什么
-								</a>
-							</TD>
-							<TD width='20%' height='25' align=middle valign='top'
-								class='jd_tab'>
-								<font color=#666666> bobo </font>
-							</TD>
-							<TD width='14%' height='25' align=left valign='top'
-								class='jd_tab'>
-								<font color=#666666>2007-10-08 13:41:50 </font>
-							</TD>
-						</TR>
-						
-						<TR class=unnamed1>
-							<TD width='6%' height='25' align=middle valign='top'
-								class='jd_tab'>
-								2
-							</TD>
-							<TD width='53%' height='25' align=left valign='top'
-								class='jd_tab'>
-								<a
-									href='revertMessage.jsp?messageID=3'>
-									<img src='img/1/jd-to.gif' border='0'>&nbsp;aa
-								</a>
-							</TD>
-							<TD width='20%' height='25' align=middle valign='top'
-								class='jd_tab'>
-								<font color=#666666> aa </font>
-							</TD>
-							<TD width='14%' height='25' align=left valign='top'
-								class='jd_tab'>
-								<font color=#666666>2008-05-28 12:00:47 </font>
-							</TD>
-						</TR>
-						
+						<%
+							}
+						%>
 					</TBODY>
 				</TABLE>
 				<TABLE width='750' border=0 align='center' cellPadding=0
