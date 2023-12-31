@@ -3,7 +3,7 @@ package model;
 import java.io.Serializable;
 
 public class Product implements Serializable {
-    private String id;
+    private int id;
     private String name;
 
 
@@ -14,7 +14,7 @@ public class Product implements Serializable {
     private String content;
     private String picture;
     private static final long serialVersionUID = 1L;
-    public Product(String id, String name, String brand, String type, int price, String content, String picture) {
+    public Product(int id, String name, String brand, String type, int price, String content, String picture) {
         this.id = id;
         this.name = name;
         this.brand = brand;
@@ -24,11 +24,14 @@ public class Product implements Serializable {
         this.picture = picture;
     }
     public Product(){}
-    public String getId() {
+
+
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

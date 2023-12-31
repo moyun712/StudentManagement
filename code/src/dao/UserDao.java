@@ -36,11 +36,11 @@ public class UserDao {
 		return false;
 	}
 	//用户登录，登录成功返回一个含值User对象,如果登录失败返回一个User空对象
-	public User login(String username,String password) {
+	public int login(String username,String password) {
 		Connection conn = DBUtils.getConnection();
 		User user = null;
 		String sql = "select * from User where username = ? and password = ?;";
-		
+		int count = 0;
 		try {
 			//获取PreparedStatement对象
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
@@ -51,11 +51,7 @@ public class UserDao {
 			
 			//判断数据库中是否存在该用户
 			if(rs.next()){
-				user = new User();//实例化一个user对象
-				//给用户对象赋值
-				user.setUsername(rs.getString("username"));
-				user.setPassword(rs.getString("password"));
-				user.setLevel(rs.getString("level"));
+				count = 1;
 			}
 			//释放资源
 			rs.close();
@@ -65,7 +61,7 @@ public class UserDao {
 		}finally {
 			DBUtils.closeConnection(conn);
 		}
-		return user;
+		return count;
 	}
 	//用户注册，注册成功返回一个含值User对象，如果注册失败返回一个User空对象
 	public User register(String username,String password,String level) {

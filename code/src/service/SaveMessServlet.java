@@ -23,8 +23,8 @@ public class SaveMessServlet extends HttpServlet {
         String title=request.getParameter("title");
         String content=request.getParameter("content");
         Date date=new Date( );
-        SimpleDateFormat sdf=new SimpleDateFormat ( "yyyy-mm-dd hh :mm:ss");
-        String time=sdf . format(date);
+        SimpleDateFormat sdf=new SimpleDateFormat ( "yyyy-MM-dd hh :mm:ss");
+        String time=sdf.format(date);
         Message m=new Message(name, title, content, time, 0);
         MessageDao messagedao=new MessageDao( ) ;
         int count=messagedao.addMessage(m);

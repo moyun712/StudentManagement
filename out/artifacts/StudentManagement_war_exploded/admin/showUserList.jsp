@@ -1,4 +1,4 @@
-
+<%@ page language="java" pageEncoding="gbk" import="dao.*,model.*,service.*,utils.*" %>
 
 
 <html>
@@ -149,7 +149,7 @@
 			<tr>
 
 			</tr>
-			
+			</form>
 			</table>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="utf-8"%>
 <html>
 
 
@@ -69,8 +69,8 @@ function openChat(){
 	background=zjej/btmunu.gif border=0>
 	<TBODY>
 		<TR vAlign=bottom>
-			<TD>&nbsp;&nbsp;<A class=nav href="index.asp">Ê×Ò³</A><FONT
-				class=nav> &gt; </FONT><A class=nav href="qyjz.asp">ÆóÒµ½¨Õ¾</A></TD>
+			<TD>&nbsp;&nbsp;<A class=nav href="index.asp">é¦–é¡µ</A><FONT
+				class=nav> &gt; </FONT><A class=nav href="qyjz.asp">ä¼ä¸šå»ºç«™</A></TD>
 		</TR>
 	</TBODY>
 </TABLE>
@@ -111,21 +111,21 @@ function openChat(){
           </tr>
           <tr>
             <td width="33"><img src="image/cg5_1.jpg" width="21" height="28" /></td>
-            <td width="158" class="d06">ÒµÎñ×¨Ïß:010-88888888</td>
+            <td width="158" class="d06">ä¸šåŠ¡ä¸“çº¿:010-88888888</td>
           </tr>
           <tr>
             <td width="33" colspan="2"><img src="image/tiao.jpg" /></td>
           </tr>
           <tr>
             <td width="33"><img src="image/cg5_1.jpg" width="21" height="28" /></td>
-            <td width="158" class="d06">ÊÛºó·şÎñ:010-66666666</td>
+            <td width="158" class="d06">å”®åæœåŠ¡:010-66666666</td>
           </tr>
           <tr>
             <td width="33" colspan="2"><img src="image/tiao.jpg" /></td>
           </tr>
           <tr>
             <td width="33"><img src="image/cg5_1.jpg" width="21" height="28" /></td>
-            <td width="158" class="d06">´«&nbsp;&nbsp;&nbsp;&nbsp;Õæ:010-12345678</td>
+            <td width="158" class="d06">ä¼ &nbsp;&nbsp;&nbsp;&nbsp;çœŸ:010-12345678</td>
           </tr>
           <tr>
             <td width="33" colspan="2"><img src="image/tiao.jpg" /></td>
@@ -136,7 +136,7 @@ function openChat(){
 </TD>
 			<TD vAlign=top width=3 bgColor=#e8e8e8></TD>
 			<td valign="top" bgcolor="#ffffff" height="300">
-			<form action="admin/adminLoginManage.jsp" method="post" name="form1">
+			<form action="loginServlet" method="get" name="form1">
 				<table width="399" border="0" align="center" cellpadding="0"
 				cellspacing="0" bordercolor="#EBEBEB">
 				<tr>
@@ -150,23 +150,23 @@ function openChat(){
 				</tr>
 				<tr align="left">
 					<td height="35" colspan="2" bgcolor="#EAF0FB" class="p16">
-					<div align="center"><span class="d6"><strong>¹Ü Àí 
-					Ô± µÇ Â¼ </strong></span></div>
+					<div align="center"><span class="d6"><strong>ç®¡ ç† 
+					å‘˜ ç™» å½• </strong></span></div>
 					</td>
 				</tr>
 
 				<tr>
 					<td width="141" height="45" align="center" bgcolor="#EBEBEB"
-						class="d5">ÄúµÄÕËºÅ£º</td>
+						class="d5">æ‚¨çš„è´¦å·ï¼š</td>
 					<td width="258" align="left" bgcolor="#EBEBEB"><input
-						name="userName" type="text" /></td>
+						name="username" type="text" /></td>
 				</tr>
 				<tr>
 
 				</tr>
 				<tr>
 					<td height="45" align="center" bgcolor="#EBEBEB" class="d5">
-					ÄúµÄÃÜÂë£º</td>
+					æ‚¨çš„å¯†ç ï¼š</td>
 					<td align="left" bordercolor="#EBEBEB" bgcolor="#EBEBEB"><input
 						name="password" type="password" size="21" /></td>
 				</tr>
@@ -179,8 +179,8 @@ function openChat(){
 				<tr>
 					<td height="60" colspan="2" valign="bottom">
 					<div align="center"><input name="submit" type="submit"
-						class="d6" value="µÇ  Â¼" /> &nbsp;&nbsp;&nbsp;&nbsp; <input
-						name="reset" type="reset" class="d6" value="ÖØ  ÖÃ" /></div>
+						class="d6" value="ç™»  å½•" /> &nbsp;&nbsp;&nbsp;&nbsp; <input
+						name="reset" type="reset" class="d6" value="é‡  ç½®" /></div>
 					</td>
 				</tr>
 				<tr>

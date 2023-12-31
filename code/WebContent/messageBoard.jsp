@@ -1,13 +1,13 @@
 <%@ page import="model.Message" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="dao.MessageDao" %>
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="utf-8"%>
 
 <html>
 	<head>
-		<title>ÁôÑÔ±¾</title>
+		<title>ç•™è¨€æœ¬</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-		<meta name="description" content="ÁôÑÔ±¾">
+		<meta name="description" content="ç•™è¨€æœ¬">
 		<link href="img/1/jd100.css" rel="stylesheet" type="text/css">
 	</head>
 	<body background=img/1/bookbg.gif leftmargin='0' topmargin='3'
@@ -21,7 +21,7 @@
 				<tr>
 					<td height='20' colspan='2' align='right' class='unnamed2'>
 						<marquee onMouseOut=start(); onMouseOver=stop(); scrollamount=3>
-							<b><font color=#000099>»¶Ó­ÄúÊ¹ÓÃ&nbsp;ÁôÑÔ±¾&nbsp;</font> </b>
+							<b><font color=#000099>æ¬¢è¿Žæ‚¨ä½¿ç”¨&nbsp;ç•™è¨€æœ¬&nbsp;</font> </b>
 						</marquee>
 					</td>
 				</tr>
@@ -35,7 +35,7 @@
 							<td width='11' background='img/1/titlemu_1.gif'></td>
 							<td width='*' background='img/1/titlemu_2.gif'>
 								<div align='center'>
-									<a href='newMessage.jsp' class=jdmenu><b>ÐÂÁôÑÔ</b>
+									<a href='newMessage.jsp' class=jdmenu><b>æ–°ç•™è¨€</b>
 									</a>
 								</div>
 							</td>
@@ -67,22 +67,22 @@
 						<TR class=jd_titlemu>
 							<TD width='5%' class='jd_tab'>
 								<div align='center'>
-									»Ø¸´
+									å›žå¤
 								</div>
 							</TD>
 							<TD width='50%' class='jd_tab'>
 								<div align='center'>
-									±êÌâ
+									æ ‡é¢˜
 								</div>
 							</TD>
 							<TD width='20%' class='jd_tab'>
 								<div align='center'>
-									×÷Õß
+									ä½œè€…
 								</div>
 							</TD>
 							<TD width='25%' class='jd_tab'>
 								<div align='center'>
-									Ê±¼ä
+									æ—¶é—´
 								</div>
 							</TD>
 						</TR>
@@ -108,7 +108,7 @@
 							</TD>
 							<TD width='20%' height='25' align=middle valign='top'
 								class='jd_tab'>
-								<font color=#666666> zzg </font>
+								<font color=#666666> <%=message.getName()%> </font>
 							</TD>
 							<TD width='14%' height='25' align=left valign='top'
 								class='jd_tab'>

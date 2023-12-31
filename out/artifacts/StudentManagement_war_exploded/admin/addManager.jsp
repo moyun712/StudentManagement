@@ -1,10 +1,10 @@
-
+<%@ page language="java" pageEncoding="utf-8" import="dao.*,model.*,service.*,utils.*" %>
 <html>
 
 	<head>
 		<meta http-equiv="Content-Language" content="zh-cn">
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-		<title>¹ÜÀíÔ±-Ìí¼Ó</title>
+		<title>ç®¡ç†å‘˜-æ·»åŠ </title>
 		<link rel="stylesheet" type="text/css" href="../css/style_admin.css">
 		
 	</head>
@@ -17,12 +17,12 @@
 				<input type="hidden" name="action" value="save" />
 				<tr>
 					<td colspan="12" class="header">
-						¹ÜÀíÔ±-Ìí¼Ó
+						ç®¡ç†å‘˜-æ·»åŠ 
 					</td>
 				</tr>
 				<tr>
 					<td class="altbg1">
-						¹ÜÀíÔ±Ãû³Æ£º
+						ç®¡ç†å‘˜åç§°ï¼š
 					</td>
 					<td class="altbg2" colspan="11">
 						<input type="text" name="username" size="34">
@@ -30,7 +30,7 @@
 				</tr>
 				<tr>
 					<td class="altbg1">
-						ÃÜ&nbsp; Âë£º
+						å¯†&nbsp; ç ï¼š
 					</td>
 					<td class="altbg2" colspan="11">
 						<input type="password" name="password" size="34">
@@ -38,7 +38,7 @@
 				</tr>
 				<tr>
 					<td class="altbg1">
-						È·ÈÏÃÜÂë£º
+						ç¡®è®¤å¯†ç ï¼š
 					</td>
 					<td class="altbg2" colspan="11">
 						<input name="confirmpassword" size="34" type="password">
@@ -50,10 +50,10 @@
 					<td class="altbg1">
 					</td>
 					<td class="altbg2" colspan="11">
-						<input type="submit" value="Ìá½»" name="B1"
+						<input type="submit" value="æäº¤" name="B1"
 							onClick="return fun_check_form();">
 						&nbsp;
-						<input type="reset" value="ÖØÖÃ" name="B2">
+						<input type="reset" value="é‡ç½®" name="B2">
 					</td>
 				</tr>
 

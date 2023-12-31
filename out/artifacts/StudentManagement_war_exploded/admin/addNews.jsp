@@ -1,4 +1,4 @@
-
+<%@ page language="java" pageEncoding="utf-8" import="dao.*,model.*,service.*,utils.*" %>
 
 
 <html>
@@ -6,16 +6,16 @@
 	<head>
 		<meta http-equiv="Content-Language" content="zh-cn">
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-		<title>¹ÜÀíÔ±-Ìí¼Ó</title>
+		<title>ç®¡ç†å‘˜-æ·»åŠ </title>
 		<link rel="stylesheet" type="text/css" href="../css/style_admin.css">
 		
 		<script type="text/javascript">
 		function fun_check_form(){
 			if(document.form1.title.value==""){
-				alert("ÇëÊäÈëĞÂÎÅ±êÌâĞÅÏ¢¡£");
+				alert("è¯·è¾“å…¥æ–°é—»æ ‡é¢˜ä¿¡æ¯ã€‚");
 				return false;
 			}else if(document.form1.content.value==""){
-				alert("ÇëÊäÈëĞÂÎÅÄÚÈİ¡£");
+				alert("è¯·è¾“å…¥æ–°é—»å†…å®¹ã€‚");
 				return false;
 			}else{
 				return true;
@@ -26,19 +26,19 @@
 	</head>
 
 	<body>
-		<form name="form1" action="addNews.jsp" method="post" onSubmit="return fun_check_form()">
+		<form name="form1" action="/addNewsServlet" method="get" onSubmit="return fun_check_form()">
 			<table cellspacing="1" cellpadding="4" width="100%"
 				class="tableborder" id="table3">
 
 				<input type="hidden" name="action" value="save">
 				<tr>
 					<td colspan="12" class="header">
-						Ìí¼ÓĞÂÎÅĞÅÏ¢
+						æ·»åŠ æ–°é—»ä¿¡æ¯
 					</td>
 				</tr>
 				<tr>
 					<td class="altbg1">
-						ĞÂÎÅ±êÌâ£º
+						æ–°é—»æ ‡é¢˜ï¼š
 					</td>
 					<td class="altbg2" colspan="11">
 						<input type="text" name="title" size="34">
@@ -46,7 +46,7 @@
 				</tr>
 				<tr>
 					<td class="altbg1">
-						ĞÂÎÅÄÚÈİ£º
+						æ–°é—»å†…å®¹ï¼š
 					</td>
 					<td class="altbg2" colspan="11">
 						<textarea rows="5" cols="60" name="content"></textarea>
@@ -58,9 +58,9 @@
 					<td class="altbg1">
 					</td>
 					<td class="altbg2" colspan="11">
-						<input type="submit" value="Ìá½»" name="B1" />
+						<input type="submit" value="æäº¤" name="B1" />
 						&nbsp;
-						<input type="reset" value="ÖØÖÃ" name="B2" />
+						<input type="reset" value="é‡ç½®" name="B2" />
 					</td>
 				</tr>
 

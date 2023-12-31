@@ -46,6 +46,16 @@ public class News implements Serializable {
         this.time = time;
     }
 
+    public News(String title, String content, String time) {
+        this.title = title;
+        this.content = content;
+        this.time = time;
+    }
+    public News(int id, String title, String content) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+    }
     private String title;
     private String content;
     private String time;

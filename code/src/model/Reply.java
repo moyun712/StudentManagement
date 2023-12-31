@@ -5,15 +5,33 @@ import java.time.LocalDateTime;
 
 public class Reply implements Serializable {
     private static final long serialVersionUID = 1L;
+
+    public Reply(int mid, String content, String name,String time, int rid) {
+        this.mid = mid;
+        this.content = content;
+        this.name = name;
+        this.time = time;
+        this.rid = rid;
+    }
+
     private int mid;
     private String content;
 
-    public Reply() {}
+
 
     private String name;
-    private LocalDateTime time;
+    private String time;
     private int rid;
 
+
+    public Reply() {}
+
+    public Reply(String content, String name, String time, int mid) {
+        this.content=content;
+        this.name = name;
+        this.time = time;
+        this.mid = mid;
+    }
 
     public int getMid() {
         return mid;
@@ -39,11 +57,11 @@ public class Reply implements Serializable {
         this.name = name;
     }
 
-    public LocalDateTime getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalDateTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 

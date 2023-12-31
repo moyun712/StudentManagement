@@ -20,7 +20,7 @@ public class ProductDao {
             prest=con.prepareStatement(sql);
             rs=prest.executeQuery();
             while(rs.next()) {
-                String id=rs.getString(1);
+                int id=rs.getInt(1);
                 String name=rs.getString("name");
                 String type=rs.getString("type");
                 int price=rs.getInt("price");
@@ -40,7 +40,7 @@ public class ProductDao {
     }
 
 
-    public Product getProductbyId(String id) {
+    public Product getProductbyId(int id) {
         Product product=null;
         Connection con=DBUtils.getConnection();
         String sql="select * from product where id=?";
@@ -48,7 +48,7 @@ public class ProductDao {
         ResultSet rs=null;
         try {
             prest = con.prepareStatement(sql);
-            prest.setString(1, id);
+            prest.setInt(1, id);
             rs = prest.executeQuery();
             if(rs.next()) {
                 String name = rs.getString("name");
@@ -66,5 +66,54 @@ public class ProductDao {
         }
         DBUtils.closeConnection(con);
         return product;
+    }
+
+    public int addProduct(Product p){
+        int count=0;
+        Connection con=DBUtils.getConnection();
+        PreparedStatement prest=null;
+        String sq1="insert into product values(?,?,?,?,?,?,?)";
+        try {
+            prest = con. prepareStatement(sq1);
+            prest. setInt(1, p.getId());
+            prest. setString(2,p. getName());
+            prest.setString(3,p.getBrand());
+            prest.setString(4, p.getType());
+            prest. setInt(5, p.getPrice());
+            prest.setString(6, p.getContent());
+            prest. setString(7, p. getPicture());
+            count=prest.executeUpdate();
+        } catch (SQLException e) {
+    // TODO Auto- generated catch block
+            e.printStackTrace();
+        }
+        finally {
+            DBUtils.closeConnection(con);
+            return count;
+        }
+    }
+    //ÐÞ¸Ä
+    public int updateProduct(Product product){
+        int count = 0;
+        Connection connection = DBUtils.getConnection();
+        PreparedStatement preparedStatement = null;
+        String sql = "update product set name = ?,brand = ?,type = ?,price = ?,content = ?,picture=? where id = ?";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,product.getName());
+            preparedStatement.setString(2,product.getBrand());
+            preparedStatement.setString(3,product.getType());
+            preparedStatement.setInt(4,product.getPrice());
+            preparedStatement.setString(5,product.getContent());
+            preparedStatement.setString(6,product.getPicture());
+            preparedStatement.setInt(7,product.getId());
+            count=preparedStatement.executeUpdate();
+            preparedStatement.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            DBUtils.closeConnection(connection);
+            return count;
+        }
     }
 }

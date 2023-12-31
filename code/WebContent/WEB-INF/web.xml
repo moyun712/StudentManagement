@@ -26,7 +26,60 @@
     <servlet-name>saveMessage</servlet-name>
     <url-pattern>/saveMessage</url-pattern>
   </servlet-mapping>
-
-
-
+  <servlet>
+    <servlet-name>saveRevert</servlet-name>
+    <servlet-class>service.SaveRevertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>saveRevert</servlet-name>
+    <url-pattern>/saveRevert</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>service.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>addNewsServlet</servlet-name>
+    <servlet-class>service.AddNewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addNewsServlet</servlet-name>
+    <url-pattern>/addNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>deleteNews</servlet-name>
+    <servlet-class>service.DeleteNewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteNews</servlet-name>
+    <url-pattern>/deleteNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>updateNews</servlet-name>
+    <servlet-class>service.UpdateNewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateNews</servlet-name>
+    <url-pattern>/updateNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>updateProduct</servlet-name>
+    <servlet-class>service.UpdateProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateProduct</servlet-name>
+    <url-pattern>/updateProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>addProductServlet</servlet-name>
+    <servlet-class>service.AddProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addProductServlet</servlet-name>
+    <url-pattern>/addProductServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

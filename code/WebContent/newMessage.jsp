@@ -1,17 +1,17 @@
-<%@ page language="java" pageEncoding="gbk"%>
+<%@ page language="java" pageEncoding="utf-8"%>
 
 <html>
 <head>
-<title>»Ø¸´ÁôÑÔ</title>
+<title>å›žå¤ç•™è¨€</title>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<meta name="description" content="ÁôÑÔ±¾">
+<meta name="description" content="ç•™è¨€æœ¬">
 <link href="img/1/jd100.css" rel="stylesheet" type="text/css">
 </head>
 
 	<body background=img/1/bookbg.gif leftmargin='0' topmargin='3'
 		  marginwidth='0' marginheight='0'>
 	<div align='center'><IMG src=img/1/welcome.jpg></div>
-	<!--   ÁôÑÔÐÅÏ¢ÏÔÊ¾    ¿ªÊ¼ -->
+	<!--   ç•™è¨€ä¿¡æ¯æ˜¾ç¤º    å¼€å§‹ -->
 		<div align='center'>
 			<div align='center' style='width:750px'>
 				<table width='750' border='0' cellspacing='1' cellpadding='4'
@@ -19,7 +19,7 @@
 					<tr>
 						<td height='20' colspan='2' align='right' class='unnamed2'>
 							<marquee onMouseOut=start(); onMouseOver=stop(); scrollamount=3>
-								<b><font color=#000099>»¶Ó­ÄúÊ¹ÓÃ&nbsp;ÁôÑÔ±¾&nbsp;</font> </b>
+								<b><font color=#000099>æ¬¢è¿Žæ‚¨ä½¿ç”¨&nbsp;ç•™è¨€æœ¬&nbsp;</font> </b>
 							</marquee>
 						</td>
 					</tr>
@@ -30,7 +30,7 @@
 						<tr>
 							<td width='11' background='img/1/titlemu_1.gif'></td>
 							<td width='*' background='img/1/titlemu_2.gif'>
-								<div align='center'><a href='messageBoard.jsp' class=jdmenu><b>ÁôÑÔ</b></a>
+								<div align='center'><a href='messageBoard.jsp' class=jdmenu><b>ç•™è¨€</b></a>
 								</div>
 							</td>
 							<td width='12' background='img/1/titlemu_3.gif'></td>
@@ -43,7 +43,7 @@
 				<TBODY>
 				<TR>
 					<TD height=25 class=jd_titlemu>
-						<div align='center'><strong>ÐÂ Áô ÑÔ </strong></div>
+						<div align='center'><strong>æ–° ç•™ è¨€ </strong></div>
 					</TD>
 				</TR>
 				<TR>
@@ -53,21 +53,21 @@
 								   cellspacing='1' class='unnamed1'>
 
 								<tr>
-									<td width='86' align='right'>ÐÕÃû£º</td>
+									<td width='86' align='right'>å§“åï¼š</td>
 									<td width='577'><input name='name' type='text'
 														   class='input1' value='' size='20' maxLength=10> <font
 											color='#FF0000'>*</font></td>
 								</tr>
 								<tr>
-									<td align='right'>±êÌâ£º</td>
+									<td align='right'>æ ‡é¢˜ï¼š</td>
 									<td><input name='title' type='text' class='input1' value=''
 											   size='30' maxlength=50></td>
 								</tr>
 								<tr>
-									<td align='right' valign='top'>ÄÚÈÝ£º</td>
+									<td align='right' valign='top'>å†…å®¹ï¼š</td>
 									<td><textarea name='content' cols='80' rows='6' class='input1'></textarea>
 										<br>
-										&nbsp;&nbsp; <input type='submit' name='Submit' value=' Ìá ½» '>
+										&nbsp;&nbsp; <input type='submit' name='Submit' value=' æ äº¤ '>
 										&nbsp; <br>
 									</td>
 								</tr>

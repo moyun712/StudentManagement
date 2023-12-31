@@ -67,6 +67,65 @@ public class NewsDao {
             return news;
         }
     }
+    //通过id删除news
+    public int deleteNews(int id){
+        int count = 0;
+        Connection connection = DBUtils.getConnection();
+        PreparedStatement preparedStatement = null;
+        String sql = "delete from news where id = ?";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,id);
+            count=preparedStatement.executeUpdate();
+            preparedStatement.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            DBUtils.closeConnection(connection);
+            return count;
+        }
+    }
+
+    //添加新闻
+    public int addNews(News news){
+        int count = 0;
+        Connection connection = DBUtils.getConnection();
+        PreparedStatement preparedStatement = null;
+        String sql = "insert into news (title,content,time)values(?,?,?)";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,news.getTitle());
+            preparedStatement.setString(2, news.getContent());
+            preparedStatement.setString(3,news.getTime());
+            count=preparedStatement.executeUpdate();
+            preparedStatement.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            DBUtils.closeConnection(connection);
+            return count;
+        }
+    }
+    //通过id修改news
+    public int updateNews(News news){
+        int count = 0;
+        Connection connection = DBUtils.getConnection();
+        PreparedStatement preparedStatement = null;
+        String sql = "update news set title = ?,content = ? where id = ?";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,news.getTitle());
+            preparedStatement.setString(2,news.getContent());
+            preparedStatement.setInt(3,news.getId());
+            count=preparedStatement.executeUpdate();
+            preparedStatement.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            DBUtils.closeConnection(connection);
+            return count;
+        }
+    }
 }
 
 

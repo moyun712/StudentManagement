@@ -129,4 +129,20 @@ public class MessageDao {
         }
     }
 
+    //更新回复数
+    public void updateCount(int mid){
+        Connection connection = DBUtils.getConnection();
+        String sql = "update message set count = count+1 where mid = ?";
+        PreparedStatement preparedStatement = null;
+        try{
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,mid);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            DBUtils.closeConnection(connection);
+        }
+    }
 }
