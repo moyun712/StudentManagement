@@ -170,7 +170,7 @@
 							<tr>
 								<td style='word-break:break-all' class=jd_title>
 									&nbsp; ※&nbsp;
-									<b><%=message.getName()%>
+									<b><%=reply.getName()%>
 									</b>
 								</td>
 							</tr>
