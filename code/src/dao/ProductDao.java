@@ -116,4 +116,22 @@ public class ProductDao {
             return count;
         }
     }
+    //É¾³ý
+    public int deleteProduct(int id){
+        int count = 0;
+        Connection connection = DBUtils.getConnection();
+        PreparedStatement preparedStatement = null;
+        String sql = "delete from product where id = ?";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,id);
+            count=preparedStatement.executeUpdate();
+            preparedStatement.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            DBUtils.closeConnection(connection);
+            return count;
+        }
+    }
 }

@@ -35,6 +35,9 @@
 						<b>商品价格</b>
 					</td>
 					<td align="center" class="altbg1">
+						<b>商品图片</b>
+					</td>
+					<td align="center" class="altbg1">
 						<b>修改</b>
 					</td>
 					<td align="center" class="altbg1">
@@ -64,18 +67,22 @@
 						<%=product.getPrice()%>
 					</td>
 					<td class="altbg2" rowspan="2" align="center">
+						<img src="../<%=product.getPicture()%>" alt="图片暂时无法显示">
+					</td>
+					<td class="altbg2" rowspan="2" align="center">
 						<a href="updateProduct.jsp?id=<%=product.getId()%>">修改</a>
 					</td>
 					<td class="altbg2" rowspan="2" align="center">
-						<a href="manageProduct.jsp?action=delete&productID=<%=product.getId()%>">删除</a>
+						<a href="/deleteProductServlet?id=<%=product.getId()%>">删除</a>
 					</td>
+				</tr>
+				<tr>
+
 				</tr>
 				<%
 					}
 				%>
-				<tr>
 
-				</tr>
 			</form>
 		</table>
 	</body>

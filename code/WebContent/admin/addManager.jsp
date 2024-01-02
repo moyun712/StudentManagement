@@ -10,7 +10,7 @@
 	</head>
 
 	<body>
-		<form name="form1" action="addManager.jsp" method="post">
+		<form name="form1" action="/addUsersServlet" method="get">
 			<table cellspacing="1" cellpadding="4" width="100%"
 				class="tableborder" id="table3">
 

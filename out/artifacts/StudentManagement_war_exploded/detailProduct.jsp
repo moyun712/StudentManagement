@@ -146,7 +146,7 @@ function openChat(){
 					<tr valign="top">
 						<td>
 							<%
-								String id = request.getParameter("productID");
+								int id = Integer.parseInt(request.getParameter("productID"));
 								ProductDao productDao = new ProductDao();
 								Product product = productDao.getProductbyId(id);
 							%>

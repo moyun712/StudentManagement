@@ -24,7 +24,7 @@ public class UpdateProductServlet extends HttpServlet {
         int price = Integer.parseInt(req.getParameter("price"));
         String picture = req.getParameter("picture");
         String content = req.getParameter("content");
-        Product product = new Product(id,name,brand,type,price,picture,content);
+        Product product = new Product(id,name,brand,type,price,content,picture);
         ProductDao productDao = new ProductDao();
         int count = productDao.updateProduct(product);
         if(count==1){

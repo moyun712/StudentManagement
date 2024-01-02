@@ -1,4 +1,5 @@
 <%@ page language="java" pageEncoding="gbk" import="dao.*,model.*,service.*,utils.*" %>
+<%@ page import="java.util.ArrayList" %>
 
 
 <html>
@@ -22,133 +23,42 @@
 					<b>用户名</b>
 				</td>
 				<td align="center" class="altbg1">
-					<b>身份代码</b>
+					<b>密码</b>
+				</td>
+				<td align="center" class="altbg1">
+					<b><INPUT onClick="return window.confirm('确认要修改选中的信息')"
+							  type="submit" value="修改"> </b>
 				</td>
 				<td align="center" class="altbg1">
 					<b><INPUT onClick="return window.confirm('确认要删除选中的信息')"
 							type="submit" value="删除"> </b>
 				</td>
 			</tr>
-			
+			<%
+				UserDao userDao = new UserDao();
+				ArrayList<User> list = userDao.query_all_user();
+				for(User user : list){
+			%>
 			<tr>
 				<td rowspan="2" align="center" class="altbg2">
-					accp
+					<%=user.getUsername()%>
 				</td>
 				<td class="altbg2" rowspan="2" align="center">
-					1
+					<%=user.getPassword()%>
 				</td>
 				<td class="altbg2" rowspan="2" align="center">
-					<a href="showUserList.jsp?action=delete&userID=1">删除</a>
+					<a href="updateUser.jsp?id=<%=user.getLevel()%>">修改</a>
+				</td>
+				<td class="altbg2" rowspan="2" align="center">
+					<a href="/deleteUserServlet?id=<%=user.getLevel()%>">删除</a>
 				</td>
 			</tr>
 			<tr>
 
 			</tr>
-			
-			<tr>
-				<td rowspan="2" align="center" class="altbg2">
-					zzg
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					0
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					<a href="showUserList.jsp?action=delete&userID=3">删除</a>
-				</td>
-			</tr>
-			<tr>
-
-			</tr>
-			
-			<tr>
-				<td rowspan="2" align="center" class="altbg2">
-					bobo
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					0
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					<a href="showUserList.jsp?action=delete&userID=4">删除</a>
-				</td>
-			</tr>
-			<tr>
-
-			</tr>
-			
-			<tr>
-				<td rowspan="2" align="center" class="altbg2">
-					balr
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					0
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					<a href="showUserList.jsp?action=delete&userID=5">删除</a>
-				</td>
-			</tr>
-			<tr>
-
-			</tr>
-			
-			<tr>
-				<td rowspan="2" align="center" class="altbg2">
-					lgy
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					0
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					<a href="showUserList.jsp?action=delete&userID=6">删除</a>
-				</td>
-			</tr>
-			<tr>
-
-			</tr>
-			
-			<tr>
-				<td rowspan="2" align="center" class="altbg2">
-					aa
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					0
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					<a href="showUserList.jsp?action=delete&userID=7">删除</a>
-				</td>
-			</tr>
-			<tr>
-
-			</tr>
-			
-			<tr>
-				<td rowspan="2" align="center" class="altbg2">
-					aaa
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					0
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					<a href="showUserList.jsp?action=delete&userID=8">删除</a>
-				</td>
-			</tr>
-			<tr>
-
-			</tr>
-			
-			<tr>
-				<td rowspan="2" align="center" class="altbg2">
-					teacher
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					0
-				</td>
-				<td class="altbg2" rowspan="2" align="center">
-					<a href="showUserList.jsp?action=delete&userID=9">删除</a>
-				</td>
-			</tr>
-			<tr>
-
-			</tr>
+			<%
+				}
+			%>
 			</form>
 			</table>
 </body>

@@ -52,12 +52,12 @@
 					<a href="/deleteNewsServlet?id=<%=news.getId()%>">删除</a>
 				</td>
 			</tr>
-				<%
-					}
-				%>
 				<tr>
 
 				</tr>
+				<%
+					}
+				%>
 			</form>
 
 		</table>

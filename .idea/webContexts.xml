@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/code/WebContent/admin/manageNews.jsp" value="file://$PROJECT_DIR$/code/WebContent/admin" />
+        <entry key="file://$PROJECT_DIR$/code/WebContent/admin/manageProduct.jsp" value="file://$PROJECT_DIR$/code/WebContent/admin" />
         <entry key="file://$PROJECT_DIR$/code/WebContent/admin/showUserList.jsp" value="file://$PROJECT_DIR$/code/WebContent/admin" />
         <entry key="file://$PROJECT_DIR$/code/WebContent/detailProduct.jsp" value="file://$PROJECT_DIR$/code/WebContent" />
         <entry key="file://$PROJECT_DIR$/code/WebContent/index.html" value="file://$PROJECT_DIR$/code/WebContent" />

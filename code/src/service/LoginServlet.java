@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
         resp.getWriter().append("Served at : ").append(req.getContextPath());
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-        User user = new User(username,password,"ÔÝÎÞ");
+        User user = new User(username,password);
         UserDao userDao = new UserDao();
         if(userDao.login(username,password)==1){
             resp.sendRedirect("admin/index.jsp");

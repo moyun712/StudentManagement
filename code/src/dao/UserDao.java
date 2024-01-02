@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 
+import model.News;
 import model.User;
 import utils.DBUtils;
 
@@ -64,7 +65,7 @@ public class UserDao {
 		return count;
 	}
 	//用户注册，注册成功返回一个含值User对象，如果注册失败返回一个User空对象
-	public User register(String username,String password,String level) {
+	public User register(String username,String password,int level) {
 		Connection conn = DBUtils.getConnection();
 		User user = null;
 		
@@ -124,7 +125,7 @@ public class UserDao {
 				User temp = new User();
 				temp.setUsername(rs.getString("username"));
 				temp.setPassword(rs.getString("password"));
-				temp.setLevel(rs.getString("level"));
+				temp.setLevel(rs.getInt("level"));
 				results.add(temp);
 			}
 			//关闭资源
@@ -138,17 +139,16 @@ public class UserDao {
 		return results;
 	}
 	//插入用户信息，返回一个int值表示状态,1：成功，0失败
-	public int insert_user(String username,String password,String level){
+	public int addUsers(User user){
 		Connection conn = DBUtils.getConnection();
-		String sql = "insert into User values(?,?,?);";
+		String sql = "insert into User(username,password) values(?,?);";
 		
 		int flag = 0;
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
 			
-			ps.setString(1, username);
-			ps.setString(2, password);
-			ps.setString(3, level);
+			ps.setString(1, user.getUsername());
+			ps.setString(2, user.getPassword());
 			flag = ps.executeUpdate();
 			ps.close();
 		} catch (SQLException e) {
@@ -159,14 +159,14 @@ public class UserDao {
 		return flag;
 	}
 	//删除用户信息，返回一个int值表示状态,1：成功，0失败
-	public int delete_user(String username) {
+	public int delete_user(int level) {
 		Connection conn = DBUtils.getConnection();
-		String sql = "delete from User where username = ?;";
+		String sql = "delete from User where level = ?;";
 		
 		int flag = 0;
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
-			ps.setString(1, username);
+			ps.setInt(1, level);
 			flag = ps.executeUpdate();
 			ps.close();
 		} catch (SQLException e) {
@@ -177,17 +177,15 @@ public class UserDao {
 		return flag;
 	}
 	//修改用户信息，返回一个int值表示状态,1：成功，0失败
-	public int alter_user(String username,String after_username,String after_password,String after_level) {
+	public int alter_user(User user) {
 		Connection conn = DBUtils.getConnection();
-		String sql = "update User set username = ?,password = ?,level = ? where username = ?;";
-		
+		String sql = "update User set username = ?,password = ? where level = ?;";
 		int flag = 0;
 		try {
 			PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
-			ps.setString(1, after_username);
-			ps.setString(2, after_password);
-			ps.setString(3, after_level);
-			ps.setString(4, username);
+			ps.setString(1, user.getUsername());
+			ps.setString(2, user.getPassword());
+			ps.setInt(3,user.getLevel());
 			flag = ps.executeUpdate();
 			ps.close();
 		} catch (SQLException e) {
@@ -196,5 +194,31 @@ public class UserDao {
 			DBUtils.closeConnection(conn);
 		}
 		return flag;
+	}
+	public User getUsersId(int id){
+		//数据库连接并编写SQL语句
+		Connection connection = DBUtils.getConnection();
+		String sql = "select * from User where level=?";
+		//新建News类对象存储数据
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		User user = null;
+		try{
+			preparedStatement=connection.prepareStatement(sql);
+			preparedStatement.setInt(1,id);
+			resultSet=preparedStatement.executeQuery();
+			if(resultSet.next()){
+				String username = resultSet.getString("username");
+				String password = resultSet.getString("password");
+				user = new User(username,password,id);
+			}
+			preparedStatement.close();
+			resultSet.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally {
+			DBUtils.closeConnection(connection);
+			return user;
+		}
 	}
 }
